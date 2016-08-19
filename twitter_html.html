@@ -1,0 +1,984 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {box-sizing:border-box;}
+ul {list-style-type: none;}
+body {
+  font-family: Helvetica,sans-serif;
+  background-color: #F0F3F5;
+}
+
+.month {
+    padding: 20px 25px;
+    width: 100%;
+    background: #ccc;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: #2D6891;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+    padding-top: 10px;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #2D6891;
+    color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+}
+button.accordion {
+    background-color: #ddd;
+    color: #2D6891;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+    font-weight: bold;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '+';
+    font-size: 16px;
+    color: #2D6891;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "-";
+    color: #2D6891;
+    font-size: 16px;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 1;
+}
+
+a, a:hover, a:active, a:visited {
+  color: #70A0BF;
+}
+
+.sectionWrapper {
+  margin-bottom: 20px;
+  border: 1px solid #CFDADE;
+}
+
+.sectionHeader {
+  text-align: center;
+  color: #fff;
+  font-size: 26px;
+  margin: 0;
+  padding: 20px;
+  background-color: #2D6891;
+  font-weight: normal;
+}
+
+.postWrapper {
+  margin-bottom: 30px;
+}
+.postAuthor {
+  font-weight: bold;
+}
+
+.postTime {
+  font-style: italic;
+}
+</style>
+</head>
+
+<body>
+<div class="sectionWrapper">
+
+<h1 class="sectionHeader">Calendar</h1>
+
+<div class="month">
+  <ul>
+    <li style="text-align:center">
+      August<br>
+      <span style="font-size:18px">2016</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">
+  <li>15</li>
+  <li>16</li>
+  <li><span class='active'>17</span></li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+</ul>
+</div>
+<div class="sectionWrapper">
+
+<h1 class="sectionHeader">News Posts</h1>
+<button class="accordion">Section 1</button>
+<div class="panel">
+
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b"China wins Olympic gold in men's team table tennis - NBC https://t.co/7hiQdheT6d"
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b"Brazil's federal police stop US swimmers Gunnar Bentz and Jack Conger from boarding flight home from Rio - O Globo https://t.co/Zf2mywqzVy"
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Report: Army sergeant recommended weapons be taken from Dallas shooter Micah Johnson in 2014  - USA Today https://t.co/fDagxgrk55'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Russia says it has carried out 2nd day of strikes against Islamic State targets in Syria from Iran base - Reuters https://t.co/2dajJidSPR'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Court in Rio de Janeiro orders passport seizure of US swimmers Ryan Lochte, James Feigen amid robbery probe - G1 https://t.co/HBPwNOxBbv'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Blue Cut Fire in San Bernardino County, Calif., grows overnight to 30,000 acres, 0% containment - @SanBernardinoNF https://t.co/9niyABaIAx'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'US Coast Guard: 512 passengers and crew being rescued from vessel fire \noff San Juan, Puerto Rico - @USCGSoutheast https://t.co/y8Wl3QzMGB'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Top Olympic official Patrick Hickey stands down temporarily after arrest in Rio over illegal ticket sales - OCI https://t.co/expTthOKlH'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Sarah Williams &amp; Katrina Walsh, sentenced to life for murder of Sadie Hartley, will serve minimum of 30 &amp; 25 years https://t.co/5DoLwJNIhg'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Two women found guilty of murdering businesswoman Sadie Hartley in Lancashire in January https://t.co/iixHSsUqOn'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Irish and European IOC chief Patrick Hickey arrested in Rio over illegal Olympic ticket sales, Brazil media report https://t.co/Yd7Fl25dvC'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Top North Korean diplomat who disappeared from London embassy has defected to South Korea, Seoul confirms https://t.co/YwJ1YkFxDF'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Malaysia oil tanker was not hijacked, officials say, but was subject to "internal dispute" now resolved'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'UK unemployment rate falls by 52,000 to 1.64 million between April and June, official figures show https://t.co/40MDal1ZRF'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Donald Trump shakes up leadership of his election campaign team for second time in two months, amid flagging polls https://t.co/dCCGeBxdMg'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Australia agrees to close controversial off-shore detention centre for asylum-seekers in Papua New Guinea https://t.co/MWuAFphSId'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'RT @CNNPolitics: Green Party presidential nominee Jill Stein: "We\'re standing up for everyday people" https://t.co/t7mNtuoz6E https://t.co/\xe2\x80\xa6'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Judge issues search warrants, seizure of passports for 2 US swimmers, including Ryan Lochte, around alleged robbery. https://t.co/W1UoF46mQW'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b"Donald Trump's campaign is undergoing a major staff shakeup, adding two officials to top posts. https://t.co/P3cmmmTG4e"
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b"HAPPENING NOW: USA vs. Brazil women's beach volleyball bronze medal match. https://t.co/D5pjujz5xO #Rio2016 https://t.co/b1j3u2B2N0"
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'LIVE: Republican VP nominee Mike Pence participates in a town hall in Henderson, Nevada. https://t.co/HByKucISDJ https://t.co/gTYLvfCw21'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'LIVE: Aerial view of firefighters continuing to battle wildfire in San Bernardino county. https://t.co/bYJhBiqZEV'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b"We're #FacebookLive discussing the stories casting a shadow over the Rio #Olympics: https://t.co/c9oe7GsSFg"
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Calling all millennials: We\xe2\x80\x99re #FacebookLive with @NM_News to discuss your financial future. https://t.co/n3LoAaa2Md'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'LIVE: NASA holds news briefing on upcoming launch of OSIRIS-REx spacecraft to asteroid. https://t.co/mRpFVxy760'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Reuters @bobbirebell is talking credit with @NerdWallet\xe2\x80\x99s Sean McQuay. #AskAGrownup on #FacebookLive: https://t.co/BhtEGJza23'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b"What's next in big data? @lilyjamali gives us the scoop on #FacebookLive with @claudia_perlich at #KDD2016: https://t.co/nKOgNtikDP"
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b"All eyes turn to the Fed as investors await July's meeting minutes. @DionRabouin &amp; @jonathanspicer are #FacebookLive https://t.co/HzJqrSkiCM"
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'LIVE: Police hold a news conference on quadruple murder in Greenville, North Carolina. https://t.co/Z2oEZseO7k'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'LIVE: Aerial view of #BlueCutFire in southern California. https://t.co/S1qPmsuWzG'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'LIVE: The IOC holds its daily news conference in Rio. https://t.co/swkwNqzGbY'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b"LIVE: Aerial view of California's Bluecut fire which has forced thousands of evacuations. https://t.co/AWpfFGFiDX"
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'LIVE: Global news headlines from the London newsroom. #FacebookLive https://t.co/Xdenrswui5 https://t.co/Iz555elHIl'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'LIVE: @anupriyakumar and @neha_5 #FacebookLive on markets from the Delhi newsroom | Watch at https://t.co/C2nj6EFvLH https://t.co/MUgkZ0fYdY'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Police in Mass. help free raccoon with head stuck in sewer drain https://t.co/HgIKt4WfQZ'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Death toll rises, housing crisis looms in flooded Louisiana https://t.co/6aA6n2bLGW'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Texan who picked up Zika in Miami is first for U.S. https://t.co/cqKWpKiuJ5'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b"Ukraine prosecutor: Paul Manafort's name appears in secret ledger https://t.co/9SQNuQacBz"
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'"World\'s largest aircraft" takes flight in maiden voyage https://t.co/ObJV89wNJk'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'David Schwimmer on the downside of \xe2\x80\x9cFriends\xe2\x80\x9d fame https://t.co/XSX7UcEWVd'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b"Day care workers charged after infant's car seat death https://t.co/KmiDzc6Gpn"
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Docs: Face-biting suspect claimed to have superpowers https://t.co/KHwxdDJ6Xb'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Googly-eyed purple squid sighting delights scientists https://t.co/U8GRw6iJkG'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Pope taps Dallas bishop to promote life, family issues https://t.co/bZmzYvXZDa'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Fed minutes: Conditions could "soon warrant" a rate hike https://t.co/uXK4BWkgJr'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Coroner: Manure fumes kill farmer, 13 cows https://t.co/3KH4IL3852'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Watch: Lightning strikes parents with son just steps away https://t.co/R4DVto9dnw'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Niagara Falls latest natural wonder to add zip line https://t.co/YdRVS5CmjF'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Donald Trump to receive first intelligence briefing https://t.co/KY39IW8ELG'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Chicago cop shot Paul O\xe2\x80\x99Neal in back, autopsy shows https://t.co/ZT9zYsU8D0'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Frantic 911 audio released after face-biting attack https://t.co/TfL6eHEepO'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Nate Parker posts about rape accuser\xe2\x80\x99s death https://t.co/dy80NGsXqr'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Leaked Clinton medical records -- real or fake? https://t.co/uxWkHvGAlj'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Johnny Depp, Amber Heard finalize $7 million divorce https://t.co/5AW8vTrRKp'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Head of Olympic Council of Ireland Patrick Hickey has stood down temporarily after being arrested over alleged illegal sale of Rio tickets'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Thames Valley Police has arrested a man in connection with the sexual assault of two six-year-old girls at #Legoland in Windsor'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Sarah Williams has been sentenced to life in prison with a\nminimum of 30 years for the murder of #SadieHartley'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Katrina Walsh has been sentenced to life in prison with a minimum of 25 years for the murder of #SadieHartley'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Sarah Williams and Katrina Walsh have been found guilty of murdering 60-year-old #SadieHartley in January'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'South Korea says a senior North Korean diplomat based in London has defected'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b"Office for National Statistics: The number of people claiming Jobseeker's Allowance between June and July fell by 8,600 to 763,600"
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Office for National Statistics: Average earnings increased by 2.4% in the year to June - up 0.1% on the previous month'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Office for National Statistics #unemployment fell by 52,000 to 1.64 million between April and June'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'RT @ABC: WATCH LIVE: Aerial video of Southern California wildfire that\xe2\x80\x99s burned over 30,000 acres. https://t.co/rfJptFZSoH https://t.co/GMD\xe2\x80\xa6'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'LIVE NOW: Sharpen your culinary knife skills with @TheBradMielke \nhttps://t.co/S9ZgUoHQXa https://t.co/1AeRfhYwBt'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'RT @ABCPolitics: WATCH LIVE: @TimKaine campaigns in Cedar Rapids, IA https://t.co/KJ1bZ0HiZG https://t.co/CnaNU9Effm'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Tornado Warning for Cabell, Jackson, Kanawha and Putnam Counties in WV until 1:45 PM EDT https://t.co/DzDRxjC4Pu'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Tornado Warning for Adams, Pike and Scioto Counties in OH until 1:30 PM EDT https://t.co/Z1Jb3nmp6q'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Tornado Warning for Adams and Brown Counties in OH until 1:00 PM EDT https://t.co/s967uAoYA7'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+              <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kevin Chen</span> -
+                  <span class="postTime">08/16/2016</span>:
+                  b'Tornado Warning for Adams, Brown and Highland Counties in OH until 11:45 AM EDT https://t.co/ichQGA501b'
+                </p>
+                <div>
+                  <a href="">Link to Original</a>
+                </div>
+              </div>
+                
+</div>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+</script>
+</body>
+
+</html>

@@ -15,6 +15,7 @@ Create a authentication.py file with:
 * EMAIL_PASSWORD = FROM_EMAIL_PASSWORD
 * EMAIL_ACCOUNT_MAIN = TO.at.gmail.com
 
+Customize your own Twitter Users. Under the twitter_user.py file, you will link to the text file that has the twitter user handles you want to get data from. I just found a list online, but you can change it to whatever you want. 
 -----------
 To Run:
 ```

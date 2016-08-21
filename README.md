@@ -1,4 +1,8 @@
-# newsletter
+# Newsletter
+
+##Why?
+
+Eventually I'll be adding more things such as news articles and some other sources. To go through all of these sites is quite a pain with all the ad spam and its really slow on my phone. Doing this, I can get open a file on my phone about 200 kb sometimes that has all the information that I want. It is a lot faster to read on my phone especially when my internet connection is pretty bad.
 
 ## Description
 

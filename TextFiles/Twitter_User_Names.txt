@@ -1,5 +1,4 @@
-BREAKING NEWS TWITTER USERS
-
+!BREAKING NEWS
 breakingnews
 bbcbreaking
 cnnbrk
@@ -10,9 +9,7 @@ AJELive
 SkyNewsBreak
 ABCNewsLive
 TWCBreaking
-
-FINANCE TWITTER USERS
-
+!FINANCE TWITTER USERS
 howardlindon
 carl_c_icahn
 reformedbroker
@@ -26,9 +23,7 @@ larry_kudlow
 jaltucher
 vicrek
 laurenlacapra
-
-DATA SCIENCE TWITTER USERS
-
+!DATA SCIENCE TWITTER USERS
 jeremywaite
 bigdata
 gillpress
@@ -60,3 +55,11 @@ mza
 ogrisel
 andrewyng
 mrogati
+!Learning
+tedtalks
+mental_floss
+brainpicker
+techreview
+healthtips
+slate
+nasa

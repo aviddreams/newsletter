@@ -117,6 +117,7 @@ button.accordion.active:after {
 div.panel {
     padding: 0 18px;
     background-color: white;
+    max-height: 0;
     overflow: hidden;
     transition: 0.6s ease-in-out;
     opacity: 0;
@@ -124,6 +125,7 @@ div.panel {
 
 div.panel.show {
     opacity: 1;
+    max-height: 10000px;
 }
 
 a, a:hover, a:active, a:visited {
@@ -201,8 +203,6 @@ calendar = """
 <div class="sectionWrapper">
 
 <h1 class="sectionHeader">News Posts</h1>
-<button class="accordion">Section 1</button>
-<div class="panel">
 """.format(calendar.month_name[today.month],daterange[0],daterange[1],daterange[2],daterange[3],daterange[4],daterange[5],daterange[6])
 
 ending_html = """

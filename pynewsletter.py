@@ -37,4 +37,4 @@ with open(send_file, 'w+') as f_html:
 
 message = "Twitter Data Completed."
 subject_line = 'Twitter News For The Day'
-# email_user_alert(message,subject_line,send_file)
+email_user_alert(message,subject_line,send_file)

@@ -12,12 +12,12 @@ def email_user_alert(message,subject_line,html_file):
     msg['Subject'] = subject_line
     msg['From'] = EMAIL_ACCOUNT
     msg['To'] = EMAIL_ACCOUNT_MAIN
-    body_message = MIMEText(message, 'plain')
-    msg.attach(body_message)
     with open(html_file, 'r') as html_file:
         attachment = MIMEText(html_file.read())
         attachment.add_header('Content-Disposition', 'attachment', filename="newsletter.html")
         msg.attach(attachment)
 
+    body_message = MIMEText(message, 'plain')
+    msg.attach(body_message)
     mail.sendmail(EMAIL_ACCOUNT,EMAIL_ACCOUNT_MAIN,msg.as_string())
     mail.close()

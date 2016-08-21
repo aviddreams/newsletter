@@ -4,7 +4,7 @@
 
 A newsletter I email myself every morning to get caught up with what happened the day before. You'll need to sign up to use the Twitter API.
 
-Setup Instructions
+##Setup Instructions
 
 Create a authentication.py file with:
 * consumer_key=

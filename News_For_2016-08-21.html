@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {box-sizing:border-box;}
+ul {list-style-type: none;}
+body {
+  font-family: Helvetica,sans-serif;
+  background-color: #F0F3F5;
+}
+
+.month {
+    padding: 20px 25px;
+    width: 100%;
+    background: #ccc;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: #2D6891;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+    padding-top: 10px;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #2D6891;
+    color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+}
+button.accordion {
+    background-color: #ddd;
+    color: #2D6891;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+    font-weight: bold;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '+';
+    font-size: 16px;
+    color: #2D6891;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "-";
+    color: #2D6891;
+    font-size: 16px;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 10000px;
+}
+
+a, a:hover, a:active, a:visited {
+  color: #70A0BF;
+}
+
+.sectionWrapper {
+  margin-bottom: 20px;
+  border: 1px solid #CFDADE;
+}
+
+.sectionHeader {
+  text-align: center;
+  color: #fff;
+  font-size: 26px;
+  margin: 0;
+  padding: 20px;
+  background-color: #2D6891;
+  font-weight: normal;
+}
+
+.postWrapper {
+  margin-bottom: 30px;
+}
+.postAuthor {
+  font-weight: bold;
+}
+
+.postTime {
+  font-style: italic;
+}
+</style>
+</head>
+
+<body>
+<div class="sectionWrapper">
+
+<h1 class="sectionHeader">Calendar</h1>
+
+<div class="month">
+  <ul>
+    <li style="text-align:center">
+      August<br>
+      <span style="font-size:18px">2016</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li><span class='active'>21</span></li>
+</ul>
+</div>
+<div class="sectionWrapper">
+
+<h1 class="sectionHeader">News Posts</h1>
+
+                <button class="accordion">BREAKING NEWS TWITTER USERS</button>
+                <div class="panel">
+                
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">TWC Breaking</span> -
+                      <span class="postTime">2016-08-20 18:14:28-07:00</span>:
+                      Tornado Warning for Champaign, Madison and Union Counties in OH until 9:45 PM EDT 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/TWCBreaking/status/767167954110730240">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/tidDDERbb7">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">TWC Breaking</span> -
+                      <span class="postTime">2016-08-20 16:42:28-07:00</span>:
+                      Tornado Warning for Champaign and Logan Counties in OH until 8:15 PM EDT 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/TWCBreaking/status/767144804048220160">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/em1ZNg9BgT">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">TWC Breaking</span> -
+                      <span class="postTime">2016-08-20 16:22:47-07:00</span>:
+                      Tornado Warning for Champaign and Logan Counties in OH until 7:45 PM EDT 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/TWCBreaking/status/767139851359571968">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/NoiX5rvldc">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">TWC Breaking</span> -
+                      <span class="postTime">2016-08-20 16:02:21-07:00</span>:
+                      Tornado Warning for Champaign, Logan, Miami and Shelby Counties in OH until 7:30 PM EDT 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/TWCBreaking/status/767134707326734336">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/qWYO5UuCeO">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">TWC Breaking</span> -
+                      <span class="postTime">2016-08-20 15:42:28-07:00</span>:
+                      Tornado Warning for Miami and Shelby Counties in OH until 7:15 PM EDT 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/TWCBreaking/status/767129702637051904">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/63K54NhtBQ">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">TWC Breaking</span> -
+                      <span class="postTime">2016-08-20 15:26:51-07:00</span>:
+                      Tornado Warning for Darke and Miami Counties in OH until 6:45 PM EDT 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/TWCBreaking/status/767125772146388992">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/KNzHiA4fRH">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">TWC Breaking</span> -
+                      <span class="postTime">2016-08-20 15:15:34-07:00</span>:
+                      Tornado Warning for Auglaize, Darke, Mercer and Shelby Counties in OH until 6:45 PM EDT 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/TWCBreaking/status/767122935735721984">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/1QBLfnjJxP">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">TWC Breaking</span> -
+                      <span class="postTime">2016-08-20 14:46:39-07:00</span>:
+                      Tornado Warning for Allen County in IN until 6:15 PM EDT 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/TWCBreaking/status/767115657502527488">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/7rV2pVjl7L">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">TWC Breaking</span> -
+                      <span class="postTime">2016-08-20 14:05:54-07:00</span>:
+                      Tornado Warning for Wells County in IN until 5:30 PM EDT 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/TWCBreaking/status/767105401242341377">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/6ADcSlnqYh">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">TWC Breaking</span> -
+                      <span class="postTime">2016-08-20 12:17:19-07:00</span>:
+                      Tornado Warning for Ionia and Montcalm Counties in MI until 3:45 PM EDT 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/TWCBreaking/status/767078077004251136">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/N72vJkqToO">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">TWC Breaking</span> -
+                      <span class="postTime">2016-08-20 11:59:40-07:00</span>:
+                      Tornado Warning for Kent and Montcalm Counties in MI until 3:30 PM EDT 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/TWCBreaking/status/767073635710275584">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/DdvfJL7Qb0">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">TWC Breaking</span> -
+                      <span class="postTime">2016-08-20 11:36:41-07:00</span>:
+                      Tornado Warning for Kent County in MI until 3:00 PM EDT 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/TWCBreaking/status/767067851576389632">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/JXDKOTL2Ea">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">TWC Breaking</span> -
+                      <span class="postTime">2016-08-20 11:35:34-07:00</span>:
+                      Tornado Warning for Barry and Eaton Counties in MI until 3:00 PM EDT 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/TWCBreaking/status/767067570629259264">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/yXcKJLrD8O">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">TWC Breaking</span> -
+                      <span class="postTime">2016-08-20 11:12:20-07:00</span>:
+                      Tornado Warning for Allegan, Kent and Ottawa Counties in MI until 2:45 PM EDT 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/TWCBreaking/status/767061722444115968">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/2nEb9f1dVL">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">TWC Breaking</span> -
+                      <span class="postTime">2016-08-20 10:47:53-07:00</span>:
+                      Tornado Warning for Allegan and Ottawa Counties in MI until 2:15 PM EDT 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/TWCBreaking/status/767055567391039488">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/W1Cp17nXiF">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">TWC Breaking</span> -
+                      <span class="postTime">2016-08-20 10:21:21-07:00</span>:
+                      Tornado Warning for Allegan and Van Buren Counties in MI until 1:45 PM EDT 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/TWCBreaking/status/767048889807405058">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/CWJ5kr9TlC">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div></div>
+                <button class="accordion">FINANCE TWITTER USERS</button>
+                <div class="panel">
+                
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-20 18:15:15-07:00</span>:
+                      After inching up for two weeks, St. Louis Fed Financial Stress Index declines to -1.094 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/767168151469580288">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/J05UL5vn5Z">Links from tweet</a><br><a href="https://t.co/DHNzlBOdpJ">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-20 17:15:15-07:00</span>:
+                      Two measures of core inflation from @ClevelandFed rose 0.2% and 0.1% in July 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/767153050964398084">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/CTEfFRyGqf">Links from tweet</a><br><a href="https://t.co/ld8Vc2nNRX">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-20 16:00:58-07:00</span>:
+                      Industrial production rose 0.74 percent in July, the most since November 2014 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/767134360621322240">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/m8QD174Kk1">Links from tweet</a><br><a href="https://t.co/spNljscldo">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-20 14:50:12-07:00</span>:
+                      What are the odds of children moving to a different rung on the economic ladder than their parents? 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/767116551292084224">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/N2UkuTkHjg">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-20 13:30:40-07:00</span>:
+                      Housing starts rose in July to an annual rate of 1.2 million, up 2.1 percent from June 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/767096532818681856">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/t7oEzuGS5S">Links from tweet</a><br><a href="https://t.co/JdcgM5ioks">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-20 12:15:25-07:00</span>:
+                      Cass index on freight shipments rose in July to 1.111, the highest in 10 months 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/767077598434295808">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/fqIDH04k21">Links from tweet</a><br><a href="https://t.co/8HjOZOmlKi">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-20 11:10:21-07:00</span>:
+                      One stage. Three @FederalReserve presidents. Transforming economies. @philadelphiafeds #Reinvent2016 h
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/767061222151884800">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/nUIaoL7dpG">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-20 10:05:22-07:00</span>:
+                      Do loan delinquencies stem from a taste for risk? Read the new issue of In the Balance 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/767044870997417985">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/cEUSE9cbpq">Links from tweet</a><br><a href="https://t.co/Wnq1nJHyZJ">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-20 09:01:42-07:00</span>:
+                      Sticky price CPI (slow to change prices) rose at an annual rate of 2.1 percent in July 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/767028846889693184">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/g8ijUTcAfo">Links from tweet</a><br><a href="https://t.co/93ieosoyhU">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-20 07:50:17-07:00</span>:
+                      See the upward trend in spot prices on crude oil since early this month 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/767010876218040320">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/prHUXdVnWs">Links from tweet</a><br><a href="https://t.co/T4NLymYJ6A">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-20 06:40:14-07:00</span>:
+                      Millennials face budgeting and other financial problems. A #stlfedcd webinar Sept. 22 will focus on how to help 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/766993247373778946">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/Qd71OjbSRX">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+</div>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+</script>
+</body>
+
+</html>

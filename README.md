@@ -8,6 +8,10 @@ Eventually I'll be adding more things such as news articles and some other sourc
 
 A newsletter I email myself every morning to get caught up with what happened the day before. You'll need to sign up to use the Twitter API. You can download the HTML file for an example as to what this project looks like.
 
+##Install Modules
+Tweepy
+Praw
+
 ##Setup Instructions
 
 Create a authentication.py file with:

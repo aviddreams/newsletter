@@ -3,6 +3,7 @@ from authentication import *
 from get_tweets import get_tweets
 from twitter_users import *
 from emailalert import email_user_alert
+from redditnews import *
 import pdb
 from html_template import *
 
@@ -31,10 +32,21 @@ with open(send_file, 'w+') as f_html:
             counter += 1
         else:
             get_tweets(api, twitter_user_name,f_html)
+    f_html.write('</div>')
+
+    list_of_subreddits = ['News','Worldnews','All','Learnprogramming']
+    for subreddit_name in list_of_subreddits:
+        reddit_section_div = """
+            <button class="accordion">{}</button>
+            <div class="panel">
+            """.format(subreddit_name)
+        f_html.write(reddit_section_div)
+        get_reddit_news(subreddit_name,f_html)
+        f_html.write('</div>')
 
     f_html.write(ending_html)
     f_html.truncate()
 
-message = "Twitter Data Completed."
-subject_line = 'Twitter News For The Day'
+message = "News Letter Completed."
+subject_line = 'News For The Day'
 email_user_alert(message,subject_line,send_file)

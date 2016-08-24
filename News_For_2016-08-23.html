@@ -1,0 +1,1291 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {box-sizing:border-box;}
+ul {list-style-type: none;}
+body {
+  font-family: Helvetica,sans-serif;
+  background-color: #F0F3F5;
+}
+
+.month {
+    padding: 20px 25px;
+    width: 100%;
+    background: #ccc;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: #2D6891;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+    padding-top: 10px;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #2D6891;
+    color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+}
+button.accordion {
+    background-color: #ddd;
+    color: #2D6891;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+    font-weight: bold;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '+';
+    font-size: 16px;
+    color: #2D6891;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "-";
+    color: #2D6891;
+    font-size: 16px;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 10000px;
+}
+
+a, a:hover, a:active, a:visited {
+  color: #70A0BF;
+}
+
+.sectionWrapper {
+  margin-bottom: 20px;
+  border: 1px solid #CFDADE;
+}
+
+.sectionHeader {
+  text-align: center;
+  color: #fff;
+  font-size: 26px;
+  margin: 0;
+  padding: 20px;
+  background-color: #2D6891;
+  font-weight: normal;
+}
+
+.postWrapper {
+  margin-bottom: 30px;
+}
+.postAuthor {
+  font-weight: bold;
+}
+
+.postTime {
+  font-style: italic;
+}
+</style>
+</head>
+
+<body>
+<div class="sectionWrapper">
+
+<h1 class="sectionHeader">Calendar</h1>
+
+<div class="month">
+  <ul>
+    <li style="text-align:center">
+      August<br>
+      <span style="font-size:18px">2016</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">
+  <li>22</li>
+  <li><span class='active'>23</span></li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+</ul>
+</div>
+<div class="sectionWrapper">
+
+<h1 class="sectionHeader">News Posts</h1>
+
+                <button class="accordion">BREAKING NEWS TWITTER USERS</button>
+                <div class="panel">
+                
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">ABC News Live</span> -
+                      <span class="postTime">2016-08-22 15:36:28-07:00</span>:
+                      RT @DrRichardBesser: Join me on @ABCNewsLive and @ABC Facebook page Tues 10:25AM ET to talk live w/ @NASA's @Astro_Jeff + #AstroKate. 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/ABCNewsLive/status/767852969467445248">Link to Original</a>
+                    </div>
+                    <div><a href="https…">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">TWC Breaking</span> -
+                      <span class="postTime">2016-08-22 00:24:35-07:00</span>:
+                      Tornado Warning for Middlesex County in MA until 4:00 AM EDT 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/TWCBreaking/status/767623485598208000">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/tOTz5Immk7">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">TWC Breaking</span> -
+                      <span class="postTime">2016-08-22 00:01:42-07:00</span>:
+                      Tornado Warning for Middlesex County in MA until 3:30 AM EDT 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/TWCBreaking/status/767617727443849216">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/laA08rmXiA">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div></div>
+                <button class="accordion">FINANCE TWITTER USERS</button>
+                <div class="panel">
+                
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-22 19:35:10-07:00</span>:
+                      How does flexibility in hours affect the gender pay gap? 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/767913041090478080">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/QZW0MYPsVX">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-22 18:05:11-07:00</span>:
+                      Index of the dollar against other major currencies dipped last week to 89.6 (March 1973=100) 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/767890395367890944">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/vTcBXaKapd">Links from tweet</a><br><a href="https://t.co/lb8w5L0Cvs">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-22 16:55:10-07:00</span>:
+                      Diesel: Average price rises to $2.370 per gallon, first weekly increase in two months 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/767872776304730113">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/ibn02Fzj5H">Links from tweet</a><br><a href="https://t.co/ddlZjqBvc5">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-22 16:35:09-07:00</span>:
+                      Average price of gasoline rises to $2.193 a gallon, first weekly increase since mid-June 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/767867737741852673">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/9qFu4toWI4">Links from tweet</a><br><a href="https://t.co/EhaOvnQfyi">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-22 15:20:14-07:00</span>:
+                      Need to review basic economic concepts? Check out our @EconLowdown  Podcast Series                
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/767848883825348608">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/gj5EzuRzB2">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-22 14:05:18-07:00</span>:
+                      Economic Synopses: In these short essays, economists delve into economic issues of the day 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/767830027274686464">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/11sXqR10ck">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-22 13:00:41-07:00</span>:
+                      Buying or refinancing a home? Weve got data on rates, points, origination fees and more h
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/767813765001805832">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/ZPrytmmZbn">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div></div>
+            <button class="accordion">News</button>
+            <div class="panel">
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">MoreLikeVoss</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Report: Rio police exaggerated their version of Ryan Lochte events, too
+                </p>
+                <div>
+                  <a href="https://www.yahoo.com/sports/news/latest-on-ryan-lochte-rio-police-chief-exaggerated-his-version-of-events-too-141250255.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Toddspickle</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Mylan executives gave themselves raises as they hiked EpiPen prices
+                </p>
+                <div>
+                  <a href="http://www.nbcnews.com/business/consumer/mylan-execs-gave-themselves-raises-they-hiked-epipen-prices-n636591">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">WearyTunes</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Harambe’s zoo has deleted all of its accounts after meme bombardment
+                </p>
+                <div>
+                  <a href="http://www.independent.co.uk/life-style/gadgets-and-tech/news/harambe-memes-twitter-facebook-cincinnati-zoo-hacked-deletes-social-media-accounts-a7205111.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">typocorrecto</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Residency where marijuana is legal no reason for police search: U.S. court
+                </p>
+                <div>
+                  <a href="http://www.reuters.com/article/us-usa-marijuana-motorists-idUSKCN10Y2A0">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">cazbot</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Evidence points to another Snowden at the NSA
+                </p>
+                <div>
+                  <a href="http://reuters.com/article/idUSKCN10X01P">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Blackjack115</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Summer Olympics are the lowest-rated and least-watched since 2000
+                </p>
+                <div>
+                  <a href="http://tvbythenumbers.zap2it.com/2016/08/23/summer-olympics-are-the-lowest-rated-and-least-watched-since-2000/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">TorgnyLagman</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Filipina maid "died of rape in Saudi Arabia"
+                </p>
+                <div>
+                  <a href="http://globalnation.inquirer.net/143147/ph-vows-justice-for-pinay-who-died-of-rape-injuries-in-saudi-arabia-dfa">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">sivribiber</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  U.S. lawmakers demand investigation of $100 price hike of lifesaving EpiPens
+                </p>
+                <div>
+                  <a href="https://www.washingtonpost.com/news/to-your-health/wp/2016/08/23/u-s-lawmakers-demand-investigation-of-100-price-hike-of-life-saving-epipens/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">relevantlife</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Polygamist leader Lyle Jeffs may not have escaped from home confinement, but was instead kidnapped or “experienced the miracle of rapture,” his lawyer raises as a possibility in a new court filing.
+                </p>
+                <div>
+                  <a href="http://fox13now.com/2016/08/23/did-fugitive-flds-leader-lyle-jeffs-experience-the-miracle-of-rapture/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">rrsafety</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Increase in organ donation due to overdose deaths leads to record number of heart transplants.
+                </p>
+                <div>
+                  <a href="http://www.wbur.org/radioboston/2016/08/23/organ-donations">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">moldcv12</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Japanese Father Kills 12-Year-Old Son For Not Studying
+                </p>
+                <div>
+                  <a href="http://time.com/4462601/japan-father-stabs-son-study-exam/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">YouAintGotToLieCraig</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  FBI Investigating Virginia Stabbings After Police Say Attacker Yelled ‘Allah Akbar’
+                </p>
+                <div>
+                  <a href="http://time.com/4462561/virginia-stabbing-fbi-investigation/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Chuffnell</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  N Korea 'fires missile from submarine' - BBC News
+                </p>
+                <div>
+                  <a href="http://www.bbc.com/news/world-asia-37171608">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Another-Chance</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Chicago Girl Shot While Attending Vigil for Boy Shot Earlier
+                </p>
+                <div>
+                  <a href="http://abcnews.go.com/US/wireStory/chicago-girl-shot-attending-vigil-boy-shot-earlier-41594982">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">blackuchiha</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Oregon collects $25.5 million in marijuana taxes since start of the year
+                </p>
+                <div>
+                  <a href="http://www.oregonlive.com/marijuana/index.ssf/2016/08/oregon_collects_255_million_in.html#incart_river_home_pop">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">cablelayer1</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Duke, a dog, wins third term as mayor in Cormorant, Minn.
+                </p>
+                <div>
+                  <a href="http://www.wlwt.com/duke-a-dog-wins-third-term-as-mayor/41323796">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">MailboxManiac</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  6.1 Magnitude earthquake strikes central Italy
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/amp/37171953">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Jericho_Gaming</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Men chant 'Black lives matter' before viciously attacking white victims, police say
+                </p>
+                <div>
+                  <a href="http://www.kfvs12.com/story/32814897/men-chant-black-lives-matter-before-viciously-attacking-white-victims">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">bvegaorl</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Man eaten alive by neighbors dogs. Only 30 percent of his body remained.
+                </p>
+                <div>
+                  <a href="http://www.wftv.com/news/local/witnesses-say-jacksonville-dog-attack-victim-was-dismembered/428332897">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Zandt88</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Phony War on Voter Fraud Looks Even Phonier
+                </p>
+                <div>
+                  <a href="https://www.bloomberg.com/view/articles/2016-08-23/phony-war-on-voter-fraud-looks-even-phonier">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            </div>
+            <button class="accordion">Worldnews</button>
+            <div class="panel">
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Hughjassbahonar</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  North Korea 'fires missile from submarine'
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-asia-37171608?ns_mchannel=social&ns_campaign=bbc_breaking&ns_source=twitter&ns_linkname=news_central">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">TheEarthquakeGuy</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  A 6.2 event has struck central Italy - Updates within
+                </p>
+                <div>
+                  <a href="http://www.reuters.com/article/us-italy-quake-idUSKCN10Z04H">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">unknown-indian</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Stomachs of dead sperm whales found in Germany filled with plastics, car parts
+                </p>
+                <div>
+                  <a href="http://newsinfo.inquirer.net/808559/biologists-discover-sperm-whales-with-stomachs-filled-with-plastic-and-car-parts">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">belgat2</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Nobel prize winner Stiglitz calls TPP 'outrageous'. Nobel prize winning economist Joseph Stiglitz says it's "absolutely wrong" for the U.S. to pass the trade deal known as the Trans-Pacific Partnership.
+                </p>
+                <div>
+                  <a href="http://money.cnn.com/2016/08/23/news/economy/joseph-stiglitz-trade/index.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">dweezil12</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Olympian may face death if he returns home after the Olympics
+                </p>
+                <div>
+                  <a href="http://www.newser.com/story/229965/after-protest-gesture-medalist-can-never-return-home.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">antimason40</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Unknown Gunmen Kill ISIS Commander Responsible for Recruitment of Children
+                </p>
+                <div>
+                  <a href="http://ifpnews.com/news/world/middle-east/2016/08/unknown-gunmen-kill-isis-commander-responsible-recruitment-children/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">madazzahatter</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  North Korean leader Kim Jong Un became so enraged by spate of recent defections that he sent assassins to South Korea & elsewhere to silence the renegades, according to government officials. Kim also ordered hit teams to target South Koreans for assassination or abduction as a tit-for-tat measure.
+                </p>
+                <div>
+                  <a href="http://www.asahi.com/ajw/articles/AJ201608230075.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">speckz</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  NSA-linked Cisco exploit poses bigger threat than previously thought
+                </p>
+                <div>
+                  <a href="http://arstechnica.com/security/2016/08/nsa-linked-cisco-exploit-poses-bigger-threat-than-previously-thought/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">PhilipTerryGraham</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  The European Southern Observatory (ESO) breaks silence; announces press conference to address reports of rumored discovery of habitable exoplanet orbiting Proxima Centauri
+                </p>
+                <div>
+                  <a href="http://www.universetoday.com/130419/eso-announcement-address-reports-proxima-centauri-exoplanet/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Sulde</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  NASA reestablishes contact with long lost spacecraft after two years of silence
+                </p>
+                <div>
+                  <a href="http://www.theverge.com/2016/8/22/12589406/nasa-stereo-b-spacecraft-contact-deep-space-network">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">WaycoolMick</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Leading Russian anti-doping official dies suddenly
+                </p>
+                <div>
+                  <a href="http://www.dailymail.co.uk/wires/ap/article-3447497/Leading-Russian-anti-doping-official-dies-suddenly.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">cryptoz</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  A huge crack is spreading across one of Antarctica’s biggest ice shelves
+                </p>
+                <div>
+                  <a href="https://www.thestar.com/news/world/2016/08/22/a-huge-crack-is-spreading-across-one-of-antarcticas-biggest-ice-shelves.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">elixirng</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Elderly Muslim leader 'murdered by two ISIS fanatics because they viewed his healing as black magic'
+                </p>
+                <div>
+                  <a href="http://www.mirror.co.uk/news/uk-news/elderly-muslim-leader-murdered-two-8688851">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">rjmrh95</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Fisherman found a giant 34kg pearl worth $100million and kept it under his bed for 10 years as a good luck charm - Puerto Princesa, Philippines
+                </p>
+                <div>
+                  <a href="http://www.dailymail.co.uk/news/article-3753300/Fisherman-giant-34kg-pearl-worth-100million-kept-bed-TEN-YEARS-good-luck-charm.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">unknown-indian</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Germany's opposition Green party unveils a 10-point plan to end electricity generation from coal within 20 years, a key plank of its campaign heading into next year's general elections
+                </p>
+                <div>
+                  <a href="http://phys.org/news/2016-08-german-greens-coal-power-years.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">luisgustavo-</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Syria Kurds win battle with government, Turkey mobilizes against them
+                </p>
+                <div>
+                  <a href="http://www.reuters.com/article/us-mideast-crisis-syria-kurds-idUSKCN10Y127?il=0">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">ImperiousJazzHands</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Australian National University has developed a solar dish with a 97% efficient sunlight-to-steam conversion rate. A new record.
+                </p>
+                <div>
+                  <a href="https://www.engadget.com/2016/08/23/solar-dish-sets-steamy-thermal-energy-efficiency-record/?sr_source=Twitter">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">xbettel</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  WikiLeaks outs gay people in Saudi Arabia in ‘reckless’ mass data dump
+                </p>
+                <div>
+                  <a href="http://www.pinknews.co.uk/2016/08/23/wikileaks-outs-gay-people-in-saudi-arabia-in-reckless-mass-data-dump/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Om_ShantiShanti</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Celtic fans warned not to fly Palestinian flags at match in Israel | Football
+                </p>
+                <div>
+                  <a href="https://www.theguardian.com/uk-news/2016/aug/23/celtic-fans-warned-not-to-fly-palestinian-flags-at-match-in-israel">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">maxwellhill</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Angela Merkel calls for 'one in, one out' immigration deals with North Africa to stem refugee crisis:The German Chancellor also demanded EU states take more refugees who have already landed in Greece
+                </p>
+                <div>
+                  <a href="http://www.independent.co.uk/news/uk/politics/angela-merkel-refugees-north-africa-immigration-crisis-turkey-deal-a7205206.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            </div>
+            <button class="accordion">All</button>
+            <div class="panel">
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">nitro4450</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  I found a sign that spelled "drive thru" correctly.
+                </p>
+                <div>
+                  <a href="https://i.redd.it/uo62agkb78hx.jpg">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Yummy_Japan</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Fresh Sushi from Tsukiji Fishmarket
+                </p>
+                <div>
+                  <a href="https://i.reddituploads.com/61735900db9148db8eedb5200b89bdd4?fit=max&h=1536&w=1536&s=04601fd6bc1ccf7061a793770107d6df">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Hughjassbahonar</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  North Korea 'fires missile from submarine'
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-asia-37171608?ns_mchannel=social&ns_campaign=bbc_breaking&ns_source=twitter&ns_linkname=news_central">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Emmababygirl</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  You never dine alone when you have a dog
+                </p>
+                <div>
+                  <a href="https://i.redd.it/ahid3o4k67hx.jpg">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Blue_E_Tank</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Gimme that Lord Farquaad
+                </p>
+                <div>
+                  <a href="http://i.imgur.com/UoEMBJm.jpg">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Noerdy</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Dog Enjoying The Breeze
+                </p>
+                <div>
+                  <a href="http://i.imgur.com/tCX8vRa.gif">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Island_Groooovies</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Bill Nye Calls CNN out for Having a Climate Change Denier Meteorologist
+                </p>
+                <div>
+                  <a href="https://www.youtube.com/watch?v=iNI3EmMqa94">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">thompsonlsr</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  My name is Danny Thompson. Last week I set a 400mph speed record in a car my dad originally built in 1968. Ask me anything!
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/IAmA/comments/4z9qu7/my_name_is_danny_thompson_last_week_i_set_a/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">iBleeedorange</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  MRW the girl I'm seeing suggests sex when I am mad at her.
+                </p>
+                <div>
+                  <a href="http://i.imgur.com/Pe0RciI.gifv">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Rushinq</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  New Sombra Hint/Teaser
+                </p>
+                <div>
+                  <a href="http://us.battle.net/forums/en/overwatch/topic/20748794686">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">The_boo_boo_Monkey</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Been seeing this woman whose name is coincidentally Gina
+                </p>
+                <div>
+                  <a href="http://www.livememe.com/qj9sxhd">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Notandi</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Next level hula hooping
+                </p>
+                <div>
+                  <a href="http://i.imgur.com/nx2o0iV.gifv">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">bladem</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  My sister's boyfriend hit our fence so i made a coffee table
+                </p>
+                <div>
+                  <a href="http://imgur.com/a/0TbEG">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Awesomanti</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Miz And Daniel Bryan get into a legit argument & Daniel walks off.
+                </p>
+                <div>
+                  <a href="https://streamable.com/yvwz">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">SmileyFace-_-</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Mom taking her pup for a walk.
+                </p>
+                <div>
+                  <a href="http://i.imgur.com/x9llSoj.gifv">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">boogietime</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  More than half the people outside the government who met with Hillary Clinton while she was secretary of state gave money - either personally or through companies or groups - to the Clinton Foundation.
+                </p>
+                <div>
+                  <a href="http://hosted.ap.org/dynamic/stories/U/US_CAMPAIGN_2016_CLINTON_FOUNDATION?SITE=AP&SECTION=HOME&TEMPLATE=DEFAULT&CTIME=2016-08-23-14-35-04">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">ecky--ptang-zooboing</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  The symmetry of this flower
+                </p>
+                <div>
+                  <a href="https://i.imgur.com/oa2PDUX.jpg">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">FredTesla</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  New Tesla Model S Now the Quickest Production Car in the World -new 100 kWh battery pack: 0-60 in 2.5 secs and 315 miles of range
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/teslamotors/comments/4z8ahq/new_tesla_model_s_now_the_quickest_production_car/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">AdamE89</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Assassination attempt
+                </p>
+                <div>
+                  <a href="http://i.imgur.com/gVe8e2g.gifv">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">MoreLikeVoss</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Report: Rio police exaggerated their version of Ryan Lochte events, too
+                </p>
+                <div>
+                  <a href="https://www.yahoo.com/sports/news/latest-on-ryan-lochte-rio-police-chief-exaggerated-his-version-of-events-too-141250255.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            </div>
+            <button class="accordion">Learnprogramming</button>
+            <div class="panel">
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">MoffKalast</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  I've spent 2 years learning programming by making games, here's every project I've done!
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4z70p5/ive_spent_2_years_learning_programming_by_making/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">BooG690</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  GitHub's Student Development Pack now offers Thinkful's Fundamentals of Web Development course
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4z9hy4/githubs_student_development_pack_now_offers/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">uncleJayJay</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Issues with planning my first website for someone
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4z9k7d/issues_with_planning_my_first_website_for_someone/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">bennbatt</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  How to input a property/library into a method?
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zacdg/how_to_input_a_propertylibrary_into_a_method/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">bacon_to_go</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  [Java] I just wrote my first linked list and I'm very self conscious about how well it's written. Is this right? I didn't look up any examples because I want to understand it on my own.
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4z80ux/java_i_just_wrote_my_first_linked_list_and_im/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">kuoa</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  A ruby script to automatically change your wallpaper daily.
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4z5g9h/a_ruby_script_to_automatically_change_your/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">shhhpiderman</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  FreeCodeCamp or Learn to Automate the Boring Things with Python?
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4z6vy5/freecodecamp_or_learn_to_automate_the_boring/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">breauxbreaux</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Can anybody tell me how to change the char code of this string?
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4z9hm2/can_anybody_tell_me_how_to_change_the_char_code/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">hotpopsicles</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  [JS] Functions Syntax Question
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4za09r/js_functions_syntax_question/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Shiquann</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  what are some good free ebooks to learn java
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4z9u0e/what_are_some_good_free_ebooks_to_learn_java/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">thwartski</span> -
+                  <span class="postTime">2016-08-22</span>:
+                  A GitHub repo listing programming/logic games I've seen most recommended in the past year
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4z2lqb/a_github_repo_listing_programminglogic_games_ive/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">vhite</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  How to master C++?
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4z5mo1/how_to_master_c/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">lambo4bkfast</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  JS - SyntaxError: Unexpected token function
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zaj0n/js_syntaxerror_unexpected_token_function/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">TheEvilAlex</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  How to display the content of my .php on my .html file?
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zai4b/how_to_display_the_content_of_my_php_on_my_html/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">jab15</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  How can I stream directX information to my program? [C#]
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zaha4/how_can_i_stream_directx_information_to_my/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">kidneyprobs</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  Can I write code that pulls numbers from several weekly emails and populates an excel spreadsheet?
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4z6l89/can_i_write_code_that_pulls_numbers_from_several/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Er-c</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Ruby Man Pages - finding certain basic objects(?) and methods(?)
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4z9doc/ruby_man_pages_finding_certain_basic_objects_and/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">alfredmuffin</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  What license should I use if I want my project to be Open Source, but I don't want other's to copy/steal the name or maybe a custom logo I created for the project?
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4z9dfi/what_license_should_i_use_if_i_want_my_project_to/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">desultr</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Looking for a book to learn java web development that focuses on servlet and JSP
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zae7p/looking_for_a_book_to_learn_java_web_development/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Bunny_Wabbit</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  [JavaScript] Object.keys(), what's going on here?
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4z97io/javascript_objectkeys_whats_going_on_here/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            </div>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+</script>
+</body>
+
+</html>

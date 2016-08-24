@@ -207,7 +207,6 @@ calendar = """
 
 ending_html = """
 </div>
-</div>
 <script>
 var acc = document.getElementsByClassName("accordion");
 var i;

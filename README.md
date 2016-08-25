@@ -4,6 +4,11 @@
 
 Eventually I'll be adding more things such as news articles and some other sources. To go through all of these sites is quite a pain with all the ad spam and its really slow on my phone. Doing this, I can get open a file on my phone about 200 kb sometimes that has all the information that I want. It is a lot faster to read on my phone especially when my internet connection is pretty bad.
 
+##Picture
+
+![alt tag](https://raw.githubusercontent.com/aviddreams/newsletter/master/Example_Newsletter.PNG)
+
+
 ## Description
 
 A newsletter I email myself every morning to get caught up with what happened the day before. You'll need to sign up to use the Twitter API. You can download the HTML file for an example as to what this project looks like.

@@ -1,0 +1,3573 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {box-sizing:border-box;}
+ul {list-style-type: none;}
+body {
+  font-family: Helvetica,sans-serif;
+  background-color: #F0F3F5;
+}
+
+.month {
+    padding: 20px 25px;
+    width: 100%;
+    background: #ccc;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: #2D6891;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+    padding-top: 10px;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #2D6891;
+    color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+}
+button.accordion {
+    background-color: #ddd;
+    color: #2D6891;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+    font-weight: bold;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '+';
+    font-size: 16px;
+    color: #2D6891;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "-";
+    color: #2D6891;
+    font-size: 16px;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 10000px;
+}
+
+a, a:hover, a:active, a:visited {
+  color: #70A0BF;
+}
+
+.sectionWrapper {
+  margin-bottom: 20px;
+  border: 1px solid #CFDADE;
+}
+
+.sectionHeader {
+  text-align: center;
+  color: #fff;
+  font-size: 26px;
+  margin: 0;
+  padding: 20px;
+  background-color: #2D6891;
+  font-weight: normal;
+}
+
+.postWrapper {
+  margin-bottom: 30px;
+}
+.postAuthor {
+  font-weight: bold;
+}
+
+.postTime {
+  font-style: italic;
+}
+</style>
+</head>
+
+<body>
+<div class="sectionWrapper">
+
+<h1 class="sectionHeader">Calendar</h1>
+
+<div class="month">
+  <ul>
+    <li style="text-align:center">
+      August<br>
+      <span style="font-size:18px">2016</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">
+  <li>22</li>
+  <li>23</li>
+  <li><span class='active'>24</span></li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+</ul>
+</div>
+<div class="sectionWrapper">
+
+<h1 class="sectionHeader">News Posts</h1>
+
+                <button class="accordion">BREAKING NEWS TWITTER USERS</button>
+                <div class="panel">
+                
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">ABC News Live</span> -
+                      <span class="postTime">2016-08-23 07:30:29-07:00</span>:
+                      LIVE NOW: ISS Astronauts discuss life in space with @DrRichardBesser. Watch: 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/ABCNewsLive/status/768093055580798976">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/MeN3sT6IwX">Links from tweet</a><br><a href="https://t.co/DF0k5us8NO">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div></div>
+                <button class="accordion">FINANCE TWITTER USERS</button>
+                <div class="panel">
+                
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-23 20:00:36-07:00</span>:
+                      How do changes in house prices affect peoples consumption? h
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/768281829853925380">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/dnErDnwE63">Links from tweet</a><br><a href="https://t.co/YAjPxql6ur">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-23 19:00:29-07:00</span>:
+                      Correspondence like that of first New York Fed leader enlivens history @FedFRASER Features 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/768266699229585408">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/CF2AIlgrDm">Links from tweet</a><br><a href="https://t.co/iJEhltolla">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-23 18:00:33-07:00</span>:
+                      A higher fraction of women work irregular hours for personal reasons than men 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/768251616596287492">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/obU5cZJaXe">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-23 17:00:40-07:00</span>:
+                      New houses were sold in July at an annual rate of 654,000, the most since 2007 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/768236544700416001">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/HE3aybc3OD">Links from tweet</a><br><a href="https://t.co/hjMLjrt6Z4">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-23 15:45:17-07:00</span>:
+                      Why would changes in house prices affect peoples buying habits? h
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/768217575721402369">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/MESP4Rsu8X">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-23 14:25:09-07:00</span>:
+                      Video shows in six minutes how a FICO credit score is determined  
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/768197410531127300">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/xxYcUSfpoX">Links from tweet</a><br><a href="https://t.co/dPZ9ynVLRs">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-23 13:15:18-07:00</span>:
+                      Median sales price for new houses sold in July was $294,600, down $15,900 from June 
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/768179829736935424">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/fPwOPrjrmA">Links from tweet</a><br><a href="https://t.co/6qSyHKbwD5">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div>
+                  <div class="postWrapper">
+                    <p class="postBody">
+                      <span class="postAuthor">St. Louis Fed</span> -
+                      <span class="postTime">2016-08-23 12:00:41-07:00</span>:
+                      Were driving more: 12-month moving total tops 3.18 trillion miles h
+                    </p>
+                    <div>
+                      <a href="https://twitter.com/stlouisfed/status/768161053935042560">Link to Original</a>
+                    </div>
+                    <div><a href="https://t.co/YlKnIpnMHr">Links from tweet</a><br><a href="https://t.co/AOCzBzORoG">Links from tweet</a><br><hr style="border-top: dotted 1px;"/></div></div></div>
+            <button class="accordion">News</button>
+            <div class="panel">
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">ed2417</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  A black homeowner called 911 to report a carjacking. He wound up getting shot by police.
+                </p>
+                <div>
+                  <a href="https://www.washingtonpost.com/news/post-nation/wp/2016/08/24/a-black-homeowner-called-911-to-report-a-carjacking-he-wound-up-getting-shot-by-police/?utm_term=.2f5fca4b4351">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">critcal_kurt</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Court: The U.S. Department of Justice cannot spend money to prosecute federal marijuana cases if the defendants comply with state guidelines
+                </p>
+                <div>
+                  <a href="http://www.reuters.com/article/us-usa-ruling-marijuana-idUSKCN10R1YN">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">gumgum</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Google to punish sites that use intrusive pop-over ads
+                </p>
+                <div>
+                  <a href="http://arstechnica.co.uk/business/2016/08/google-to-punish-sites-that-use-intrusive-pop-over-ads/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">restore_democracy</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Senator's daughter who raised price of EpiPen got $19 million salary, perks in 2015
+                </p>
+                <div>
+                  <a href="http://www.chicagotribune.com/business/ct-epipen-ceo-bresch-salary-20160824-story.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">commieflirt</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Parents suing State of Mississippi about charter schools receiving public money
+                </p>
+                <div>
+                  <a href="http://wjtv.com/2016/08/23/parents-suing-state-of-mississippi-about-charter-schools-receiving-public-money/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">magenta_placenta</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Comcast’s $70 gigabit deal is shockingly difficult to sign up for - The Keyser Söze of Internet offers: Even some Comcast reps don't know it exists
+                </p>
+                <div>
+                  <a href="http://arstechnica.com/information-technology/2016/08/comcasts-70-gigabit-exists-on-paper-hard-to-get-in-real-life/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">PotatoAvenger</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Orlando Health, Florida Hospital won't bill Pulse shooting victims
+                </p>
+                <div>
+                  <a href="http://www.orlandosentinel.com/news/pulse-orlando-nightclub-shooting/os-orlando-health-wont-bill-pulse-victims-20160824-story.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">br427</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  14-Year-Old Shot and Killed His Grandmother Because He Didn’t Want to Go to School
+                </p>
+                <div>
+                  <a href="http://time.com/4464303/hunter-reeser-shot-grandmother/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">feastandexist</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  TSA hassles 9-year-old boy with pacemaker, claiming policy prevents terrorist attacks involving children
+                </p>
+                <div>
+                  <a href="http://www.fox32chicago.com/news/195256514-story">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Ilikespacestuff</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Sandusky Co. Sheriff indicted on 43 charges including 38 felony counts
+                </p>
+                <div>
+                  <a href="http://www.wtol.com/story/32826813/sandusky-co-sheriff-indicted-on-43-charges-including-38-felony-counts?clienttype=generic&sf34208861=1">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">singleladad</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  U.S Soccer bans Hope Solo for 6 months following her Olympics remarks
+                </p>
+                <div>
+                  <a href="http://www.si.com/planet-futbol/2016/08/24/uswnt-hope-solo-suspended-us-soccer-six-months-olympics-sweden-cowards">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">thinkB4WeSpeak</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  The Pentagon shifted $146.9 billion over six years from its wartime accounts to pay for routine operations, and its accounting systems don't know the difference between the two, according to a new report from the Government Accountability Office.
+                </p>
+                <div>
+                  <a href="http://www.defensenews.com/articles/gao-oco-base">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">magenta_placenta</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Chromebooks outsell Macs for the first time - More Google Chromebooks are sold in the US than Apple Macs, according to the latest figures from analyst firm IDC
+                </p>
+                <div>
+                  <a href="https://www.theguardian.com/technology/2016/may/23/chromebook-mac-google-pc-sales">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">aurelorba</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  New permit for Nestle water-taking at low rate 'inappropriate': Wynne
+                </p>
+                <div>
+                  <a href="http://guelph.ctvnews.ca/new-permit-for-nestle-water-taking-at-low-rate-inappropriate-wynne-1.3041989#">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Reading-Raptor</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  State Of Emergency Declared After 'Large and Extremely Dangerous' Tornado Tears Through Kokomo, Indiana
+                </p>
+                <div>
+                  <a href="https://weather.com/news/news/tornado-confirmed-kokomo-indiana">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">michaeljaccarino</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Police: Man killed after meeting woman on PlentyOfFish dating site
+                </p>
+                <div>
+                  <a href="http://www.sfgate.com/news/article/Police-Man-killed-after-PlentyOfFish-date-9182041.php">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">interestedin86</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Report of secret aerial surveillance by Baltimore police prompts questions, outrage
+                </p>
+                <div>
+                  <a href="http://www.baltimoresun.com/news/maryland/baltimore-city/bs-md-ci-secret-surveillance-20160824-story.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">EatingTacosInTexas</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Dildos descend on UT Austin in 'Cocks Not Glocks' protest of guns on campus
+                </p>
+                <div>
+                  <a href="http://www.mysanantonio.com/news/local/article/Dildos-are-descending-on-the-UT-Austin-campus-9181629.php">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">maxwellhill</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Citing Catholic Rules, Doctor Turns Away Bleeding Woman With Dislodged IUD
+                </p>
+                <div>
+                  <a href="https://rewire.news/article/2016/08/23/complaint-citing-catholic-rules-doctor-turns-away-bleeding-woman-dislodged-iud/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Firetrucker</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Crusader-era hand grenade surprises archaeologists
+                </p>
+                <div>
+                  <a href="http://www.foxnews.com/science/2016/08/24/crusader-era-hand-grenade-surprises-archaeologists.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            </div>
+            <button class="accordion">Worldnews</button>
+            <div class="panel">
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">dan603311</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  American university in Kabul under attack, reports of gunfire, explosion
+                </p>
+                <div>
+                  <a href="https://www.rt.com/news/357035-kabul-attack-american-university/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">budmeup</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Astronomers have discovered a roughly Earth-size alien world around Proxima Centauri, which lies just 4.2 light-years from our own solar system. What's even more exciting, study team members said, is that the planet, known as Proxima b, circles in the star's "habitable zone.”
+                </p>
+                <div>
+                  <a href="http://www.space.com/33834-discovery-of-planet-proxima-b.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">secretwarmonger</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Turkey invades Syria
+                </p>
+                <div>
+                  <a href="http://www.israelnationalnews.com/News/News.aspx/216865">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">bikinsatulagi</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  U.S. calls on Americans to leave Gaza "as soon as possible"
+                </p>
+                <div>
+                  <a href="http://www.newsweek.com/us-calls-americans-leave-gaza-soon-possible-492974">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">jonsnowknowthings</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  North Korean teenagers are no longer filled with the patriotic spirit their leaders drum into them from the earliest age, and many compare their repressive country unfavorably to its more affluent neighbors and the West
+                </p>
+                <div>
+                  <a href="http://english.chosun.com/site/data/html_dir/2016/08/23/2016082301387.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">ja_2q</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Apple could be on the hook for $19 billion in taxes, and the Obama administration is livid
+                </p>
+                <div>
+                  <a href="http://www.businessinsider.com/apple-taxes-us-treasury-european-commission-2016-8">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">theburningundead</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Magnitude 6.8 earthquake strikes central Myanmar
+                </p>
+                <div>
+                  <a href="http://news.trust.org/item/20160824104352-vgwwz">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">rebecca232</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Cosmetics companies must be banned from using plastic microbeads in scrubs, toothpaste and beauty products because of the marine pollution they are causing, say a group of MPs.
+                </p>
+                <div>
+                  <a href="https://www.theguardian.com/environment/2016/aug/24/microplastics-ban-in-cosmetics-save-oceans-mps-say-microbeads">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">ionised</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Coma patient's brain 'jump-started' by ultrasound in breakthrough that could help 'wake up' others | Scientists caution the 'remarkable' improvements in 25-year-old's condition could be a coincidence, but believe they may have found a way to treat people in a vegetative state
+                </p>
+                <div>
+                  <a href="http://www.independent.co.uk/news/science/coma-patient-ultrasound-breakthrough-jump-start-brain-a7207511.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">CaptainOberynCrunch</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Colombia reaches historic pact with rebels, ending the longest running conflict in the Western Hempisphere.
+                </p>
+                <div>
+                  <a href="http://www.usatoday.com/story/news/world/2016/08/24/colombia-reaches-peace-deal-farc/87463846/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">NinjaDiscoJesus</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  The Colombian government and the Farc rebel group have signed a historic peace accord, putting an end to more than five decades of conflict.
+                </p>
+                <div>
+                  <a href="http://www.bbc.com/news/world-latin-america-37180752">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">sivatribe</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Japan wants citizens to donate their old phone to make 2020 Olympics medals
+                </p>
+                <div>
+                  <a href="http://www.techradar.com/news/phone-and-communications/mobile-phones/japan-wants-citizens-to-donate-their-phone-to-make-2020-olympic-medals-1326938">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Lard_Baron</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Israel sold weapons to Argentina at height of their war with the British over the Falklands Island, reveal declassified Foreign Office files.
+                </p>
+                <div>
+                  <a href="http://www.jpost.com/Israel-News/Declassified-UK-files-reveal-Israel-sold-arms-to-Argentina-during-Falklands-War-465911">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">bioshock1998</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Senators Rand Paul and Chris Murphy vote to block $1.15 billion US arms deal to Saudi Arabia for the war in Yemen.
+                </p>
+                <div>
+                  <a href="http://www.independent.co.uk/news/world/americas/rand-paul-block-us-sales-agreement-saudi-arabia-war-yemen-death-toll-chris-murphy-a7193026.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">ghostly-dog</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  World's largest aircraft crashes on second test flight
+                </p>
+                <div>
+                  <a href="http://www.independent.co.uk/life-style/gadgets-and-tech/news/airlander-10-bottom-aircraft-worlds-largest-bedfordshire-crash-a7207291.html">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">CripZ96</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  New Planet Is 'Right Next Door 'We hit the jackpot' in finding new planet close by, astronomers say
+                </p>
+                <div>
+                  <a href="http://www.nbcnews.com/science/science-news/new-planet-right-next-door-n637281">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">LefthandedLunatic</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Russia say they are deeply worried by Turkish operation in Syria.
+                </p>
+                <div>
+                  <a href="http://www.reuters.com/article/mideast-crisis-syria-turkey-russia-idUSR4N1AW01F">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">SenorNoobnerd</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Philippine President Rodrigo Duterte orders troops to ‘destroy’ Abu Sayyaf(Muslim Extremists) after beheading of hostage
+                </p>
+                <div>
+                  <a href="http://newsinfo.inquirer.net/809453/rody-orders-troops-to-destroy-abus-after-beheading-of-teener-captive">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">TheEarthquakeGuy</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  A 6.2 event has struck central Italy - Updates within
+                </p>
+                <div>
+                  <a href="http://www.reuters.com/article/us-italy-quake-idUSKCN10Z04H">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">faguzzi</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Doctors Without Borders Refused to Help American ISIS Hostage Kayla Mueller
+                </p>
+                <div>
+                  <a href="http://abcnews.go.com/international/doctors-borders-refused-american-isis-hostage-kayla-mueller/story?id=41601887">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            </div>
+            <button class="accordion">All</button>
+            <div class="panel">
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Bellemy</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  "Sometimes, Pippa comes out for the daily delivery but there's no mail for her to collect. So I have to improvise" - local postie
+                </p>
+                <div>
+                  <a href="http://imgur.com/pqdryZV">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Selfcontrolled101</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Why I love this show
+                </p>
+                <div>
+                  <a href="http://imgur.com/VrNlneY">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">i124qnds</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Chameleon
+                </p>
+                <div>
+                  <a href="http://i.imgur.com/l3vQvhH.gifv">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">r_swizzles</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  100 to humble real quick
+                </p>
+                <div>
+                  <a href="https://i.redd.it/rhxa5sktgehx.png">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">gorthiv</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Chameleon Giving Birth
+                </p>
+                <div>
+                  <a href="http://i.imgur.com/l3vQvhH.gifv">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">dittidot</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Red Carpet Event
+                </p>
+                <div>
+                  <a href="http://i.imgur.com/C3Soq7B.jpg">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">1Voice1Life</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Frozen fish comes back to life
+                </p>
+                <div>
+                  <a href="http://i.imgur.com/kaCha8K.gifv">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Sourcecode12</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  A 28 year-old Jenny Joseph modeling for what would become today's Columbia Pictures logo.
+                </p>
+                <div>
+                  <a href="https://i.redd.it/vli866fy3ehx.jpg">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">SomeRandomUserGuy</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  TIFU by letting someone on the internet know where I live (semi-live)
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/tifu/comments/4zf57r/tifu_by_letting_someone_on_the_internet_know/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Elvenstar32</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Reaper highlight intro lying on a pile of his thrown out guns
+                </p>
+                <div>
+                  <a href="https://gfycat.com/GenerousPoisedHamster">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">LethophobicKarma</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  India cows get glow-in-the-dark horns to stop crashes
+                </p>
+                <div>
+                  <a href="http://www.news24.com/Green/News/india-cows-get-glow-in-the-dark-horns-to-stop-crashes-20160823">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Hendipen</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  WHEN TWO MADMEN COLLIDE. Nigel Farrage speaks at a Trump rally
+                </p>
+                <div>
+                  <a href="https://youtu.be/oj4K9fr_WgY">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">truehero22</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  At least spark is enjoying it
+                </p>
+                <div>
+                  <a href="http://imgur.com/CkeQcCi">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Benentono</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  TIL that 30 years ago, you had about about 17 minutes to escape a house fire. Today it's down to 3-4 minutes.
+                </p>
+                <div>
+                  <a href="http://www.today.com/home/newer-homes-furniture-burn-faster-giving-you-less-time-escape-t65826">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">onlysame1</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Practicing his shot
+                </p>
+                <div>
+                  <a href="http://i.imgur.com/nrY1Lo9.gifv">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Rupispupis</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Now THIS is what I call Social Justice
+                </p>
+                <div>
+                  <a href="http://imgur.com/a/LcALm">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">speckz</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Orlando hospital says it won’t bill survivors of shooting at Pulse nightclub
+                </p>
+                <div>
+                  <a href="https://www.washingtonpost.com/news/post-nation/wp/2016/08/24/orlando-hospital-says-it-wont-bill-pulse-shooting-survivors/?utm_term=.3de01b0d1fce">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">JediMasterYensid</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Regi responds Marc 2.0
+                </p>
+                <div>
+                  <a href="http://www.twitlonger.com/show/n_1sp1mpa">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">classyyoyo</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  I found a place that looks like rust from MW2
+                </p>
+                <div>
+                  <a href="https://i.reddituploads.com/38bc69bab4f344988ad149385c2a78dd?fit=max&h=1536&w=1536&s=94d462d273e8d74ea13a8abc00f53f5a">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Wrx09</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Fall is coming, let's play a game
+                </p>
+                <div>
+                  <a href="http://imgur.com/SFibRla">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            </div>
+            <button class="accordion">Learnprogramming</button>
+            <div class="panel">
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">programmerChilli</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  I recently created a quick app to try and start learning React.js. This is notreddit.top, the most downvoted posts on reddit (short summary of how I created it inside)
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zcldm/i_recently_created_a_quick_app_to_try_and_start/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">bradonf333</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Does the University I get my degree from matter?
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zg2t3/does_the_university_i_get_my_degree_from_matter/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">cryogenics12</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Please give me advice on how to align my goals and develop a plan to focus on concrete/specific things. I need to set some short/intermediate term goals.
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zfn5d/please_give_me_advice_on_how_to_align_my_goals/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">susurubi</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Have interest in programming some basic things but don't have idea where to start from
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zg42g/have_interest_in_programming_some_basic_things/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">jerseyse410</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  It's a little intimidating to realize how many different programming languages I need to know or be familiar with to perform a particular task
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zfx9p/its_a_little_intimidating_to_realize_how_many/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">IslandIdealist</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Hi again! IslandIdealist here and I would like to give an updated post about my Discord Server: Programming Discussions.
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zfqjv/hi_again_islandidealist_here_and_i_would_like_to/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Drwildy</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  [C++] How to convert a string into and int
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zflmy/c_how_to_convert_a_string_into_and_int/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">AskMeAnyQuestion</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Looking for fellow beginner (multiple people welcome!) to learn Java with and partner on making some programs together
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zgkft/looking_for_fellow_beginner_multiple_people/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">nemt</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  The Odin project opinions?
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4ze1sl/the_odin_project_opinions/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">ashamed_to_ask_this</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  C++: choosing arguments from a predefined set
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zgf90/c_choosing_arguments_from_a_predefined_set/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Garlandjon95</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Navbar Overlays Content
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zfqi3/navbar_overlays_content/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Gunsareforpunks</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Demoralized in coding class
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zekek/demoralized_in_coding_class/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">startswiths</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Data sets for languages
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zfyu6/data_sets_for_languages/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">MoffKalast</span> -
+                  <span class="postTime">2016-08-23</span>:
+                  I've spent 2 years learning programming by making games, here's every project I've done!
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4z70p5/ive_spent_2_years_learning_programming_by_making/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">UMichiganAI</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  [Cross Post] We are a faculty team aiming to bring Applied Data Science with Python skills to everyone through a Coursera specialization this fall doing an AMA in r/IAmA! Ask us anything!
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zctue/cross_post_we_are_a_faculty_team_aiming_to_bring/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">howtocreate</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  How do I create an app that takes photo of a food and give its calorie count?
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zgl99/how_do_i_create_an_app_that_takes_photo_of_a_food/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">FlippngProgrammer</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Problem giving multiple Jbuttons the same actionListener event.
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zgjny/problem_giving_multiple_jbuttons_the_same/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">account1233</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  Developed a sort of automated system using and Arduino, 3rd party libraries and my own code. What if my company wants to implement it?
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zgi8i/developed_a_sort_of_automated_system_using_and/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">edimaudo</span> -
+                  <span class="postTime">2016-08-24</span>:
+                  Looking for Android Development mentor
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zdwep/looking_for_android_development_mentor/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">dastygianwarrior</span> -
+                  <span class="postTime">2016-08-25</span>:
+                  FRIENDS I AM TIRED OF NOT BEING ABLE TO COMPILE AND RUN MY C PROGRAMS.
+                </p>
+                <div>
+                  <a href="https://www.reddit.com/r/learnprogramming/comments/4zgbk1/friends_i_am_tired_of_not_being_able_to_compile/">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            </div>
+            <button class="accordion">BBC News</button>
+            <div class="panel">
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Italy earthquake: Search for survivors as death toll tops 160</span> -
+                  <span class="postTime">Thu, 25 Aug 2016 03:42:24 GMT</span>:
+                  Thousands of rescuers search through the night for survivors following Wednesday's deadly earthquake in a mountainous area of central Italy.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-europe-37181933">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Camber Sands sea death toll rises to five</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 21:32:51 GMT</span>:
+                  Two more bodies are pulled from the sea at Camber Sands in East Sussex, hours after three men were recovered from the water on the hottest day of the year.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-england-sussex-37178643">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Immigration: Brexit an opportunity to fix 'broken' system</span> -
+                  <span class="postTime">Thu, 25 Aug 2016 03:07:15 GMT</span>:
+                  Leaving the EU is an opportunity to fix the UK's "broken" immigration system and restore public confidence in controlled migration, a report says.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-politics-37177937">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Get campaigning, UKIP's Farage tells Donald Trump rally</span> -
+                  <span class="postTime">Thu, 25 Aug 2016 01:04:38 GMT</span>:
+                  Outgoing UK Independence Party leader Nigel Farage tells supporters of Donald Trump to get out and campaign for the Republican presidential candidate.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-politics-37177938">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Colombia and Farc rebels sign historic peace agreement</span> -
+                  <span class="postTime">Thu, 25 Aug 2016 03:19:03 GMT</span>:
+                  Colombia's government and the Farc rebel group sign a historic peace agreement after nearly four years of negotiations.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-latin-america-37180752">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">GCSE results set to be revealed</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:33:52 GMT</span>:
+                  Hundreds of thousands of pupils in England, Wales and Northern Ireland are finding out their GCSE results.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/education-37175848">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Greater Manchester Police 'fails to record 38,000 crimes each year'</span> -
+                  <span class="postTime">Thu, 25 Aug 2016 01:37:02 GMT</span>:
+                  Greater Manchester Police failed to record over 38,000 reported crimes each year, a report estimates.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-england-manchester-37180057">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">'Soft' prison sentences extended after complaints</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:55:14 GMT</span>:
+                  The prison sentences of 102 offenders in England and Wales were extended last year, following complaints the original terms were too soft.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-37181508">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Tax warning over unlocked pensions</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 22:59:07 GMT</span>:
+                  Some people are being hit with an unexpected tax bill after unlocking their money from a pension pot, according to Citizens Advice.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37173896">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Barbequed rare burgers 'pose food poisoning risk'</span> -
+                  <span class="postTime">Thu, 25 Aug 2016 01:10:42 GMT</span>:
+                  The Food Standards Agency is warning people not to eat burgers that are pink in the middle, to avoid the risk of food poisoning at barbeques this summer.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/health-37174082">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Irish church review over Grindr claims</span> -
+                  <span class="postTime">Thu, 25 Aug 2016 02:55:48 GMT</span>:
+                  Catholic church authorities in Ireland order a review of social media access for trainee priests after allegations some of them used the gay dating app Grindr.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-europe-37182056">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Pulled from the wreckage of her convent in Amatrice</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 22:31:45 GMT</span>:
+                  At least 120 people have been killed after a powerful earthquake struck central Italy in the early hours of Wednesday.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-europe-37180504">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Earthquake causes houses to crash down hillside in Italy village</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 22:43:15 GMT</span>:
+                  In Pescara del Tronto, all the houses have collapsed so that the village no longer exists. Damian Grammaticas reports.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-europe-37180503">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Farage gives election advice to Trump</span> -
+                  <span class="postTime">Thu, 25 Aug 2016 00:49:35 GMT</span>:
+                  Outgoing UKIP leader Nigel Farage addresses supporters of US presidential candidate Donald Trump at a campaign rally in Mississippi.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-us-canada-37182075">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Airlander cabin 'hit ground and it was horrible'</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 18:01:42 GMT</span>:
+                  The world's longest aircraft has been damaged after a nosedive landing on its second test flight. Angela Marie Hatwell was there and saw it happen.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-37181004">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Face transplant patient: 'Now I have hope'</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 21:33:43 GMT</span>:
+                  Patrick Hardison, the volunteer fireman who underwent the world's most extensive face transplant, on his new-found hope.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-us-canada-37180501">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Chinese gamer: I play for 15 hours a day</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:05:42 GMT</span>:
+                  Eighteen-year-old Wei Zhen, a rising star in the gaming industry, tells the BBC how he made playing games his profession.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-asia-36447209">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Five ways Proxima b find is important</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 17:00:54 GMT</span>:
+                  Scientists have discovered a planet similar to Earth that is orbiting our Sun's nearest neighbour, Proxima Centauri.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/science-environment-37180499">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Jeremy Corbyn angered by questions about train seat row</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 10:44:53 GMT</span>:
+                  Labour leader Jeremy Corbyn angered by media questions about claims he was not able to get a seat on a Virgin Train.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-politics-37175727">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">BBC News Channel</span> -
+                  <span class="postTime">Wed, 16 Mar 2016 12:34:37 GMT</span>:
+                  Britain's most-watched news channel, delivering breaking news and analysis all day, every day.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/10318089">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Pneumatic octopus is a first for soft robotics</span> -
+                  <span class="postTime">Thu, 25 Aug 2016 00:27:50 GMT</span>:
+                  Engineers in the US have built a self-contained, entirely soft robot - in the shape of a 7cm octopus.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/science-environment-37169109">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Scottish restaurants given top Good Food Guide ranking</span> -
+                  <span class="postTime">Thu, 25 Aug 2016 00:04:38 GMT</span>:
+                  Five restaurants in Scotland achieve a Top 50 listing in the 2017 Good Food Guide, with Andrew Fairlie at Gleneagles leading the Scottish entries.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-scotland-37179502">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Sean Coughlan: What parents really mean about exam results</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:33:42 GMT</span>:
+                  GCSE results are being published, and parents will have to react to the news. What will they really mean?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/education-37175844">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Paul Rincon: Where should we look for aliens?</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:28:10 GMT</span>:
+                  How do astronomers decide whether a planet is potentially habitable?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/science-environment-37158561">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Sarah Rainsford: Protesting in Putin's Russia</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:29:39 GMT</span>:
+                  As Russia gears up for parliamentary elections, how is it dealing with dissenting protestors?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-europe-37173820">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">GCSEs 2016 - a user's guide</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:33:08 GMT</span>:
+                  A guide to this year's GCSEs.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/education-37175074">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">How many people have to stand on trains?</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 14:02:03 GMT</span>:
+                  Jeremy Corbyn has brought the issue of overcrowded trains into the spotlight again, but why are our trains so busy and just how bad is the problem?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37176151">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Why Pokemon Go may have passed its peak</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 14:13:35 GMT</span>:
+                  New independent data suggests that the augmented reality craze is beginning to cool off.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37176782">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Why are microbeads controversial?</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 10:38:37 GMT</span>:
+                  MPs have recommended banning the tiny particles of plastic called "microbeads" which are used in a number of cosmetics and cleaning products. But why have they taken the move?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/science-environment-37175379">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Yuval Noah Harari: "We are probably one of the last generations of Homo sapiens."</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 08:09:06 GMT</span>:
+                  Historian and author of the international bestseller Sapiens: A Brief History of Humankind, Yuval Noah Harari speaks about the future of humanity.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-37171171">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Newspaper headlines: Italy earthquake and Camber Sands deaths</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 22:53:01 GMT</span>:
+                  The devastation in Italy following the earthquake on Wednesday, and the deaths of five men at a beach in Camber Sands, feature in the papers.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/blogs-the-papers-37181506">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Italy earthquake</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 13:46:26 GMT</span>:
+                  Images from before and after an earthquake struck central Italy show the huge scale of the disaster.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-europe-37176601">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Valleys and harbours</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 05:52:19 GMT</span>:
+                  A selection of your pictures from around Wales.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-wales-37104452">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Rio 2016 closing ceremony</span> -
+                  <span class="postTime">Mon, 22 Aug 2016 04:16:20 GMT</span>:
+                  In pictures: The best and most bizarre moments of the Rio 2016 closing ceremony
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/sport/olympics/37152063">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Summer in Snowdonia</span> -
+                  <span class="postTime">Tue, 23 Aug 2016 10:16:21 GMT</span>:
+                  Hyfrydwch un o'n Parciau Cenedlaethol trwy lens y ffotograffydd Dafydd Em // Snowdonia National Park in summer through the lens of photographer Dafydd Em
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/newyddion/37165161">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Africans living in India</span> -
+                  <span class="postTime">Sun, 21 Aug 2016 23:46:04 GMT</span>:
+                  Photographer Mahesh Shantaram documents the lives of Africans living in India.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-asia-india-37094516">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Manchester City 1-0 (agg: 6-0) Steaua Bucharest</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 21:29:52 GMT</span>:
+                  Joe Hart marks possibly his last appearance for Manchester City with a clean sheet as they reach the Champions League group stage.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/sport/football/37158791">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">England v Pakistan: Joe Root and Jason Roy earn Southampton win</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 21:08:10 GMT</span>:
+                  England coast to a 44-run win over Pakistan in a rain-affected first one-day international in Southampton.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/sport/cricket/37180963">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Accrington Stanley 1-0 Burnley (AET)</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 22:01:11 GMT</span>:
+                  Matty Pearson scores a winner late in extra time for Accrington as they knock Premier League Burnley out of the EFL Cup
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/sport/football/37103144">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Robbie Keane will retire from Republic of Ireland duty after Oman game</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 15:55:27 GMT</span>:
+                  Robbie Keane announces that the Republic of Ireland's friendly against Oman on 31 August will be his last international.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/sport/football/37178551">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Crying game</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:52:16 GMT</span>:
+                  Japanese companies are paying for employees to attend "crying workshops".
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/magazine-37178014">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">GCSE quiz</span> -
+                  <span class="postTime">Thu, 25 Aug 2016 01:19:17 GMT</span>:
+                  It's the last year of the current system, which was introduced in 1988. But how would you fare against today's teenagers in the current exams?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/magazine-37178008">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Sleep your way to the top</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:07:38 GMT</span>:
+                  Successful bosses often boast of how little they sleep, but is sleeping more better for your career?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-36959769">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Campaigning firms</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:16:00 GMT</span>:
+                  A look at the growing number of businesses who are trying to make a positive difference to society by speaking out on societal or political issues, and their reasons for doing so.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37057981">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Good old days</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 20:26:48 GMT</span>:
+                  A survey by Pew Research found that supporters of Trump and Clinton have very different opinions about America's past.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-us-canada-37161449">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">No laughing matter</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:22:05 GMT</span>:
+                  Pedro Almodovar on why his 20th film is his most serious yet.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/entertainment-arts-37176126">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            </div>
+            <button class="accordion">BBC WorldNews</button>
+            <div class="panel">
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Italy earthquake: Search for survivors as death toll tops 160</span> -
+                  <span class="postTime">Thu, 25 Aug 2016 03:42:24 GMT</span>:
+                  Thousands of rescuers search through the night for survivors following Wednesday's deadly earthquake in a mountainous area of central Italy.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-europe-37181933">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Colombia and Farc rebels sign historic peace agreement</span> -
+                  <span class="postTime">Thu, 25 Aug 2016 03:19:03 GMT</span>:
+                  Colombia's government and the Farc rebel group sign a historic peace agreement after nearly four years of negotiations.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-latin-america-37180752">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Kabul raid: Seven students among 13 dead in university attack</span> -
+                  <span class="postTime">Thu, 25 Aug 2016 03:05:45 GMT</span>:
+                  Thirteen people including seven students died in an attack by gunmen on the American University in the Afghan capital Kabul, police say.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-asia-37178241">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">IS conflict: Turkey-backed Syrian rebels 'take Jarablus'</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 20:22:49 GMT</span>:
+                  Syrian rebels, backed by Turkish forces and US air cover, say they have taken the Syrian town of Jarablus from jihadists of so-called Islamic State.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-europe-37171995">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Islamic State group recruiter Hamdi Alqudsi 'loves Australia'</span> -
+                  <span class="postTime">Thu, 25 Aug 2016 01:29:34 GMT</span>:
+                  A Sydney man who helped seven young men travel from Australia to Syria to fight with Islamic State breaks down in tears and tells a court he is "not a terrorist".
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-australia-37181985">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Protests over huge N Dakota oil pipeline</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 21:53:35 GMT</span>:
+                  Dozens of protesters gather in Washington DC to express their fears about a huge oil pipeline which will cross four states in the US Midwest.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-us-canada-37181064">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Fish killer closes Yellowstone River</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 14:17:03 GMT</span>:
+                  Montana officials indefinitely close the Yellowstone River over concerns of a deadly parasite that has killed off thousands of fish.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-us-canada-37177181">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">France 'burkini ban': Images of police on beach fuel debate</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 14:17:45 GMT</span>:
+                  Images of French police appearing to fine a woman on a beach in Nice fuel the debate over a controversial "burkini ban".
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-europe-37173673">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Tornadoes tear down buildings and cut power in Indiana</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 22:49:18 GMT</span>:
+                  At least two tornadoes strike the US state of Indiana, damaging buildings, destroying a Starbucks cafe and cutting power to thousands.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-us-canada-37181751">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Airlander 10: Longest aircraft damaged during flight</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 16:23:06 GMT</span>:
+                  The world's longest aircraft - the Airlander 10 - is damaged when it takes a nosedive on landing during its second test flight.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-england-beds-bucks-herts-37174417">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Syrian conjoined twins die awaiting transfer abroad</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 15:50:42 GMT</span>:
+                  One-month-old conjoined twins who were evacuated from a besieged rebel-held suburb of Syria's capital Damascus die while awaiting transfer abroad.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-middle-east-37173911">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Vietnam woman 'cuts off limbs for insurance payout'</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 15:24:23 GMT</span>:
+                  A Vietnamese woman admits to paying for her left hand and foot to be severed to defraud her insurance firm with a rail accident claim, police say.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-asia-37177504">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">China unveils 2020 Mars mission probe and rover</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 04:43:24 GMT</span>:
+                  China gives the world a first glimpse of the space probe and rover it plans to use in its first mission to Mars in 2020.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-asia-china-37171942">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Pulled from the wreckage of her convent in Amatrice</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 22:31:45 GMT</span>:
+                  At least 120 people have been killed after a powerful earthquake struck central Italy in the early hours of Wednesday.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-europe-37180504">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Earthquake causes houses to crash down hillside in Italy village</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 22:43:15 GMT</span>:
+                  In Pescara del Tronto, all the houses have collapsed so that the village no longer exists. Damian Grammaticas reports.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-europe-37180503">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Face transplant patient: 'Now I have hope'</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 21:33:43 GMT</span>:
+                  Patrick Hardison, the volunteer fireman who underwent the world's most extensive face transplant, on his new-found hope.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-us-canada-37180501">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">'Terrible to see 'burkini' confrontation'</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 16:04:54 GMT</span>:
+                  Mathilde Cousin describes what happened on a Nice beach when French police appeared to make a woman remove clothing under a "burkini ban".
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-europe-37179995">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Flipped 3D printer makes giant objects</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 11:49:26 GMT</span>:
+                  A 3D printer that can produce large items such as plane parts is developed.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37176662">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Child who dreams of human pyramids</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 14:21:00 GMT</span>:
+                  Dahi Handi one of India's most spectacular festivals that involves making a human pyramid and breaking an earthen pot filled with yoghurt suspended high in the sky.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-asia-37177898">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Ukraine military parade marks 25 years of independence</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 16:27:02 GMT</span>:
+                  Ukraine is marking 25 years of independence from the Soviet Union with a huge military parade through Kiev, the celebrations are poignant amid current tensions with Russia.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-europe-37177897">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Artist Peter Doig wins case over painting he said was not his work</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 06:11:30 GMT</span>:
+                  A Chicago court accepts that artist Peter Doig did not paint a landscape, valued at $10m (£7.6m) when it was believed to be by him.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-us-canada-37171831">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">India doctors remove 40 knives from man's stomach</span> -
+                  <span class="postTime">Tue, 23 Aug 2016 09:52:08 GMT</span>:
+                  Doctors in India say they have surgically removed 40 knives from a man's stomach, although it is not clear why the man had swallowed them.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-asia-india-37163586">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">China jaywalkers given instant road safety lesson</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 11:26:23 GMT</span>:
+                  Jaywalkers in a Chinese city are taken to a classroom and taught about traffic rules.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/blogs-news-from-elsewhere-37174143">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Fruit smugglers 'upgrade' Russian border road</span> -
+                  <span class="postTime">Tue, 23 Aug 2016 11:39:46 GMT</span>:
+                  Route on the Russian-Belarusian border is secretly upgraded by fruit smugglers.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/blogs-news-from-elsewhere-37166353">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Nose-picking ban for Philippines police</span> -
+                  <span class="postTime">Tue, 23 Aug 2016 08:04:48 GMT</span>:
+                  New directive also tells police in Manila not to scratch any part of their bodies.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/blogs-news-from-elsewhere-37156962">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Crying game</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:52:16 GMT</span>:
+                  Japanese companies are paying for employees to attend "crying workshops".
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/magazine-37178014">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Ghost town</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:34:41 GMT</span>:
+                  The largest town that Boko Haram ever controlled still lies in ruins, frozen in time nearly 18 months after Nigeria's military recaptured it, writes the BBC's Martin Patience.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-africa-37178258">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Austrian tragedy</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:32:04 GMT</span>:
+                  A year after 71 people suffocated in the back of an airless lorry on its way to Austria, Bethany Bell and Nick Thorpe retrace the journey and ask what went wrong.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-europe-37163217">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">No laughing matter</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:22:05 GMT</span>:
+                  Pedro Almodovar on why his 20th film is his most serious yet.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/entertainment-arts-37176126">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Good old days</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 20:26:48 GMT</span>:
+                  A survey by Pew Research found that supporters of Trump and Clinton have very different opinions about America's past.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-us-canada-37161449">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Campaigning firms</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:16:00 GMT</span>:
+                  A look at the growing number of businesses who are trying to make a positive difference to society by speaking out on societal or political issues, and their reasons for doing so.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37057981">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Lights, camera, tsunami</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:15:39 GMT</span>:
+                  A slick music video in which a US invasion force is destroyed by a patriotic tsunami has upset Iranian conservatives.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/blogs-trending-37176313">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Sleep your way to the top</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:07:38 GMT</span>:
+                  Successful bosses often boast of how little they sleep, but is sleeping more better for your career?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-36959769">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Ghost weddings</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 06:41:37 GMT</span>:
+                  The alleged murder of two women in China, reportedly so their bodies could be used in ghost weddings, shines a light on an ancient and enduring Chinese ritual.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-asia-china-37103447">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Go-getters in the ghetto</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 09:37:12 GMT</span>:
+                  France's immigrant suburbs have a terrible image and are accused of breeding jihadists, but there is a hidden, dynamic side to them, says Henri Astier.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-europe-37062048">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Donkeys and dogs</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 04:42:35 GMT</span>:
+                  Pyongyang's Central Zoo, home to elephants, turtles and a surprisingly large variety of dogs, re-opened its doors after some two years of renovations.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-asia-37171963">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Prison ramen</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 00:03:41 GMT</span>:
+                  A new study suggests ramen noodles are now the most valuable prison commodity. Why and how do inmates whip up their own delicacies?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-us-canada-37164279">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Female gaze</span> -
+                  <span class="postTime">Tue, 23 Aug 2016 23:10:12 GMT</span>:
+                  Indian woman takes on the trolls after writing in defence of the female gaze.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/blogs-trending-37167510">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Into the lion's den?</span> -
+                  <span class="postTime">Tue, 23 Aug 2016 23:19:00 GMT</span>:
+                  As US Vice-President Joe Biden arrives in the Turkish capital, how do relations between the two countries stand?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-europe-37167640">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            </div>
+            <button class="accordion">BBC Business</button>
+            <div class="panel">
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">US criticises EU tax probes ahead of Apple ruling</span> -
+                  <span class="postTime">Thu, 25 Aug 2016 00:41:18 GMT</span>:
+                  The US Treasury Department has warned the European Commission about taking action against US companies over tax deals ahead of a ruling on tech giant Apple.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37179785">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Tax warning over unlocked pensions</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 22:59:07 GMT</span>:
+                  Some people are being hit with an unexpected tax bill after unlocking their money from a pension pot, according to Citizens Advice.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37173896">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Lloyds boss regrets 'adverse publicity' after reports of affair</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 10:02:59 GMT</span>:
+                  The boss of Lloyds regrets the "adverse publicity and damage" caused by recent media coverage of his personal life.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37172693">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Asian companies have world's worst cybersecurity says study</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 22:59:11 GMT</span>:
+                  Asian organisations are the worst prepared against cyber-attacks globally, according to US security company Mandiant.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37163076">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Why did Sir Richard Branson take on Jeremy Corbyn?</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 10:01:53 GMT</span>:
+                  Why did Sir Richard Branson plunge into a row with Jeremy Corbyn - and why nearly a week after the incident?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37175038">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Shoppers' credit card use unaffected by Brexit, say banks</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 09:21:23 GMT</span>:
+                  The UK is a nation of shoppers unfazed by the EU referendum result when spending on plastic, says a trade body representing the major banks.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37173229">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Google punishes sites with pop-up adverts</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 16:17:04 GMT</span>:
+                  Google will give a lower search ranking to sites with "frustrating" pop-up ads from 2017.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37178470">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Tesla's Elon Musk says new car battery is a milestone</span> -
+                  <span class="postTime">Tue, 23 Aug 2016 23:28:01 GMT</span>:
+                  Tesla Motors unveils a new battery pack for its cars that boss Elon Musk says marks a profound milestone for the speed and distance of its electric vehicles.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37171455">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Qantas airline soars to record profit after restructuring</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 00:55:33 GMT</span>:
+                  Australia's national carrier Qantas posts a record annual profit of A$1.42bn ($1.1bn, £820m), nearly doubling last year's result.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37171850">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">South Africa finance minister won't submit to police</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 18:44:29 GMT</span>:
+                  South Africa's finance minister has said he will not appear before the police despite a request to do so.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37172419">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">India investigating French submarine company data leak</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 09:15:35 GMT</span>:
+                  India is investigating a massive data leak from French shipbuilder DCNS that revealed crucial details about submarines being built for the Indian navy.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37171856">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Advertising firm WPP 'grinding out' growth</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 13:01:23 GMT</span>:
+                  Sir Martin Sorrell, the boss of WPP, the world's largest advertising group, says the company is "grinding out" growth, with companies cautious amid slower global growth.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37172686">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Nigeria banks banned from foreign currency deals</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 12:21:17 GMT</span>:
+                  Nine Nigerian banks are suspended from foreign currency trading for not paying a total of $2bn owed to the government, a central bank source tells the BBC.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-africa-37173186">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Glencore steps up debt reduction plan</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 11:36:49 GMT</span>:
+                  Mining company Glencore reports a fall in half-year profits but says it is aiming to cut its debt pile at a faster rate this year.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37172413">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">FTSE 100 dips as Glencore shares slide</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 16:04:08 GMT</span>:
+                  The FTSE 100 index slips as Glencore shares are hit by its latest results, but WPP jumps as strong sales bolster the ad giant.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37172605">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">'It's about freedom': Ban boosts burkini sales 'by 200%'</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 00:43:30 GMT</span>:
+                  The Australian woman credited with creating the burkini says bans on the full-bodied Islamic swimsuit in France have boosted sales.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-europe-37171749">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Los Angeles Lakers sign Chinese Olympian Yi Jianlian</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 09:44:37 GMT</span>:
+                  The Los Angeles Lakers have signed Chinese Olympian and power forward Yi Jianlian following his performance in Rio.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37172123">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Virgin challenges Jeremy Corbyn train footage</span> -
+                  <span class="postTime">Tue, 23 Aug 2016 19:57:36 GMT</span>:
+                  Virgin Trains questions footage showing Jeremy Corbyn sitting on the floor of a "ram-packed" service, saying he had walked past available seats.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-politics-37167700">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">North Korea promotes local brew at first ever beer festival</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:12:23 GMT</span>:
+                  North Korea is holding its first ever beer festival to promote its domestic brew Taedonggang.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-asia-37152183">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">'My job is to inspire people to tidy up'</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 00:02:30 GMT</span>:
+                  Giving up your high-flying job as a lawyer in Shanghai to become a professional home organiser may be an unusual choice for many, but that's exactly what Han Yien did.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37118485">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Buses battle it out on test track</span> -
+                  <span class="postTime">Tue, 23 Aug 2016 05:14:10 GMT</span>:
+                  BBC News visits an annual bus competition designed to test handling and fuel efficiency, which helps a UK bus group choose the next generation of vehicles.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37158521">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Climbing the Australian housing ladder can be tough</span> -
+                  <span class="postTime">Tue, 23 Aug 2016 01:09:24 GMT</span>:
+                  Getting on the property ladder can be tough for home buyers the world over, but in Australia the property dream is slipping away for many.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37161655">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Android 7.0 Nougat released by Google</span> -
+                  <span class="postTime">Mon, 22 Aug 2016 17:59:36 GMT</span>:
+                  Google rolls out a new version of Android that allows mobile devices to run two apps simultaneously on the same screen.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37154926">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Contactless customers urged to 'check' before they tap</span> -
+                  <span class="postTime">Mon, 22 Aug 2016 16:50:17 GMT</span>:
+                  Personal finance expert Claer Barrett says there is a danger people will pay more than they should if they fail to check the amount before tapping their card.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37159939">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">CEO Secrets: Thoughts on a career at PwC</span> -
+                  <span class="postTime">Mon, 22 Aug 2016 07:23:10 GMT</span>:
+                  Dennis Nally, who has just stepped down as head of accountancy network PricewaterhouseCoopers, offers the business advice he wishes he had been given.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37111847">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Urjit Patel: What issues face the new RBI governor?</span> -
+                  <span class="postTime">Mon, 22 Aug 2016 08:42:43 GMT</span>:
+                  What are the issues new Reserve Bank of India governor, Urjit Patel, will have to deal with?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37153911">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Norway traders win an hour in data fight</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 12:51:05 GMT</span>:
+                  Traders in Norway have won an hour's reprieve in the battle over the new timing of the country's economic data releases.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37175050">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Ex-BHS boss Dominic Chappell loses licence over speeding</span> -
+                  <span class="postTime">Tue, 23 Aug 2016 10:59:49 GMT</span>:
+                  Former BHS boss and racing driver Dominic Chappell, who bought the retail chain for £1, is banned from driving for six months after admitting speeding.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-england-36939820">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Campaigning firms</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:16:00 GMT</span>:
+                  A look at the growing number of businesses who are trying to make a positive difference to society by speaking out on societal or political issues, and their reasons for doing so.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37057981">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Sleep your way to the top</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 23:07:38 GMT</span>:
+                  Successful bosses often boast of how little they sleep, but is sleeping more better for your career?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-36959769">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Squeezing in</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 14:02:03 GMT</span>:
+                  Jeremy Corbyn has brought the issue of overcrowded trains into the spotlight again, but why are our trains so busy and just how bad is the problem?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37176151">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">In the rough</span> -
+                  <span class="postTime">Tue, 23 Aug 2016 23:03:08 GMT</span>:
+                  The sporting goods giants of Nike and Adidas are both looking to sell their golf club businesses. The BBC looks at what some of the reasons may be.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37153683">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Who's bugging you?</span> -
+                  <span class="postTime">Mon, 22 Aug 2016 23:24:04 GMT</span>:
+                  After the New Zealand rugby team discover a listening device in their Sydney hotel meeting room, we examine just how much spying technology has advanced in recent years.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37154314">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Enforced paternity leave...</span> -
+                  <span class="postTime">Tue, 23 Aug 2016 12:20:10 GMT</span>:
+                  What are some of the steps that could be taken to narrow the pay gap between men and women?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-37164297">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">'Astronomical' prices</span> -
+                  <span class="postTime">Mon, 22 Aug 2016 23:54:30 GMT</span>:
+                  For many Australians the dream of owning their own property is slipping away. But could a shared ownership scheme help address the affordability crisis in Sydney, the country's most expensive city?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37116439">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">How to be mediocre and be happy with yourself</span> -
+                  <span class="postTime">Sun, 21 Aug 2016 23:02:03 GMT</span>:
+                  We're often urged to strive for excellence, to be the best we can be, to push for more - but some argue we'd be happier if we calmed down and embraced mediocrity.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37108240">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Delivering results</span> -
+                  <span class="postTime">Sun, 21 Aug 2016 23:02:19 GMT</span>:
+                  How the chief executive of UPS went from low level, part-time worker to chief executive of the world's largest parcel delivery service.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37087358">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Changing of the guard</span> -
+                  <span class="postTime">Mon, 22 Aug 2016 10:47:28 GMT</span>:
+                  India appoints a government insider as the new head of its central bank. Can Urjit Patel emerge from his predecessor "rock star" Raghuram Rajan's shadow?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37153380">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Can't wait, won't wait!</span> -
+                  <span class="postTime">Thu, 18 Aug 2016 23:32:16 GMT</span>:
+                  Online shoppers want fast websites and apps that are also visually rich and personalised, but how technically difficult is this to achieve?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37100091">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Farming dreams</span> -
+                  <span class="postTime">Thu, 18 Aug 2016 23:36:16 GMT</span>:
+                  The ambitious new plan to overhaul Sierra Leone's agriculture sector.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-36955088">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Time for a comeback</span> -
+                  <span class="postTime">Wed, 17 Aug 2016 23:14:13 GMT</span>:
+                  A look at the small but growing number of luxury British watchmakers who aim to put the UK back at the forefront of the global timepiece industry.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-36902222">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Farming support</span> -
+                  <span class="postTime">Wed, 17 Aug 2016 23:06:41 GMT</span>:
+                  The weaker pound since the UK’s Brexit vote means euro-denominated EU farming subsidies could worth 15% more to British farmers next year. But the boost may be a short-term one.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37094194">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Victory, taxed</span> -
+                  <span class="postTime">Wed, 17 Aug 2016 16:09:00 GMT</span>:
+                  US athletes are leading in the Olympic medal count but when the winners return home they will be welcomed with both national pride - and a hefty tax bill.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37099066">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">'It spoils everything'</span> -
+                  <span class="postTime">Tue, 16 Aug 2016 23:06:42 GMT</span>:
+                  Plans to develop an opencast coal mine in Northumberland have split locals - some support the jobs created under the scheme, while others are concerned about the impact on tourism.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37011378">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Jobs at risk</span> -
+                  <span class="postTime">Tue, 16 Aug 2016 23:08:07 GMT</span>:
+                  Bangladesh's garments industry is nervous that foreign buyers might pull out after a recent attack by Islamic militants killed 20 people, most of them foreigners.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-36904696">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            </div>
+            <button class="accordion">BBC Technology</button>
+            <div class="panel">
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Apple accused of iPhone 6 'touch disease' defect</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 13:19:02 GMT</span>:
+                  Apple faces claims that it is failing to address a flaw that causes iPhone screens to become unresponsive.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37174316">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Asian companies have world's worst cybersecurity says study</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 22:59:11 GMT</span>:
+                  Asian organisations are the worst prepared against cyber-attacks globally, according to US security company Mandiant.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37163076">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Why Pokemon Go may have passed its peak</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 14:13:35 GMT</span>:
+                  New independent data suggests that the augmented reality craze is beginning to cool off.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37176782">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Google punishes sites with pop-up adverts</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 16:17:04 GMT</span>:
+                  Google will give a lower search ranking to sites with "frustrating" pop-up ads from 2017.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37178470">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">University hit 21 times in one year by ransomware</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 08:01:06 GMT</span>:
+                  Universities and NHS trusts have been hit hard by ransomware in the last year, according to Freedom of Information requests carried out by two cybersecurity firms.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37166545">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">How good is Tibet's Beijing-backed search engine?</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 11:23:18 GMT</span>:
+                  The Beijing-backed launch of the first-ever Tibetan language search engine raises suspicions about the Chinese government's motives.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37171855">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Wikileaks criticised on sensitive data</span> -
+                  <span class="postTime">Tue, 23 Aug 2016 15:15:31 GMT</span>:
+                  Wikileaks has been criticised for not doing enough to screen sensitive information found in documents released via the site.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37165230">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">India investigating French submarine company data leak</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 09:15:35 GMT</span>:
+                  India is investigating a massive data leak from French shipbuilder DCNS that revealed crucial details about submarines being built for the Indian navy.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37171856">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Russian hackers 'targeted New York Times'</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 01:38:22 GMT</span>:
+                  The FBI is investigating whether Russian hackers have carried out a series of cyber attacks on the New York Times, officials tell US media.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-us-canada-37171350">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Poor security 'aided' Ashley Madison hack</span> -
+                  <span class="postTime">Tue, 23 Aug 2016 17:39:32 GMT</span>:
+                  The Ashley Madison dating site had "inadequate" security systems and used fake icons to make people think it was safe, reveals a report.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37170542">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Android 7.0 Nougat released by Google</span> -
+                  <span class="postTime">Mon, 22 Aug 2016 17:59:36 GMT</span>:
+                  Google rolls out a new version of Android that allows mobile devices to run two apps simultaneously on the same screen.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37154926">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Facebook launches Lifestage app for school teens</span> -
+                  <span class="postTime">Mon, 22 Aug 2016 13:47:40 GMT</span>:
+                  Facebook has launched a new social media app, without privacy settings, aimed at young people in school.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37154458">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Can political apps send more young people to the polls?</span> -
+                  <span class="postTime">Mon, 22 Aug 2016 23:21:33 GMT</span>:
+                  Will smartphone apps encourage more young people to go to the polls?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-36977279">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Windows 10 update stops webcams working</span> -
+                  <span class="postTime">Mon, 22 Aug 2016 10:59:45 GMT</span>:
+                  Millions of people are reporting that a Windows 10 update has stopped their webcams from working.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37154516">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">North Korea 'Netflix' device unveiled</span> -
+                  <span class="postTime">Mon, 22 Aug 2016 11:02:46 GMT</span>:
+                  A set-top box offering video-on-demand services has been unveiled by the state broadcaster KCTV in North Korea, according to local reports.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37154456">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Gun crime tech 'failed to save lives' in Chicago</span> -
+                  <span class="postTime">Mon, 22 Aug 2016 12:16:18 GMT</span>:
+                  An attempt to use software to identify potential gun crime victims did not save any lives, a study suggests.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37154918">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Drones seized over HMP Pentonville carrying drugs and phones</span> -
+                  <span class="postTime">Mon, 22 Aug 2016 13:06:50 GMT</span>:
+                  Drones carrying larges amounts of drugs and mobile phones are intercepted by police as they were being flown near a north London jail.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-england-london-37152665">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">T-Mobile deal 'may breach US net neutrality' rules</span> -
+                  <span class="postTime">Fri, 19 Aug 2016 11:36:33 GMT</span>:
+                  An 'unlimited' smartphone data deal that charges extra for premium services may be in breach of US net neutrality rules, campaigners say.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37130987">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Uber to deploy self-driving cars in Pittsburgh</span> -
+                  <span class="postTime">Thu, 18 Aug 2016 14:45:48 GMT</span>:
+                  Ride-sharing firm Uber will begin allowing users to hail a self-driving car in a US city later this month, it confirms.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37117831">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Internet spying powers backed by review</span> -
+                  <span class="postTime">Fri, 19 Aug 2016 13:58:05 GMT</span>:
+                  Britain's spies should be allowed to continue harvesting internet data, the government's reviewer of terror laws has said in a review.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-politics-37130455">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Uber's $100m settlement with drivers rejected by judge</span> -
+                  <span class="postTime">Fri, 19 Aug 2016 00:12:29 GMT</span>:
+                  A $100m settlement between the taxi-hailing app Uber and some of its drivers is rejected by a US judge.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37125575">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Grooming prompts online lessons call</span> -
+                  <span class="postTime">Fri, 19 Aug 2016 08:38:59 GMT</span>:
+                  More than 150 people are reported to police in Wales for meeting children following sexual grooming over the last five years, prompting calls for compulsory online safety lessons for pupils.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-wales-37120567">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Spyware maker faces legal battle over alleged affair</span> -
+                  <span class="postTime">Thu, 18 Aug 2016 17:19:39 GMT</span>:
+                  A spyware company could face legal action after a US court ruled that it illegally intercepted an unwitting man's messages.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37118673">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">China demands stricter rules for live streaming</span> -
+                  <span class="postTime">Fri, 19 Aug 2016 08:28:51 GMT</span>:
+                  China's internet regulator demands stricter controls over the hugely popular practice of live streaming, as part of a range of new requirements for websites.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/world-asia-china-37127904">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Is Russia hacking the US election?</span> -
+                  <span class="postTime">Thu, 18 Aug 2016 11:51:27 GMT</span>:
+                  Huge leaks of data from US organisations have been attributed by some to Russia, so has the former Soviet state launched cyberwar on the US elections?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37117414">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">News site Gawker.com to shut down next week</span> -
+                  <span class="postTime">Fri, 19 Aug 2016 01:57:04 GMT</span>:
+                  Media company Gawker says it will close its main news site next week, days after it was bought by Univision in a bankruptcy auction.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37125348">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Currys PC World scolded over 4K Euro 2016 advert</span> -
+                  <span class="postTime">Thu, 18 Aug 2016 11:50:09 GMT</span>:
+                  The UK's advertising watchdog criticises Currys PC World for running a "misleading" advert about 4K television sets.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37117584">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Twitter shuts 235,000 more 'extremist' accounts</span> -
+                  <span class="postTime">Thu, 18 Aug 2016 16:07:22 GMT</span>:
+                  Twitter has suspended 235,000 accounts for violating its policies on the promotion of terrorism, the social network says.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37120932">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">McDonald's drops wearable over claims it can cause rash</span> -
+                  <span class="postTime">Thu, 18 Aug 2016 11:09:53 GMT</span>:
+                  The fast food chain McDonald's drops a free wearable tech gadget it was giving to children, over reports that it can cause skin irritation.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37117824">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Reddit defends Suicide Squad 'music leaker'</span> -
+                  <span class="postTime">Wed, 17 Aug 2016 17:40:03 GMT</span>:
+                  Reddit has refused to hand over the details of an alleged music leaker to Atlantic Records.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37111534">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Tencent overtakes Alibaba as China's biggest tech company</span> -
+                  <span class="postTime">Thu, 18 Aug 2016 09:56:44 GMT</span>:
+                  Tencent, the owner of popular messaging app WeChat, overtakes rival Alibaba as China's biggest technology firm by market value.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37114284">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Intel factory to make ARM-based smartphone chips</span> -
+                  <span class="postTime">Wed, 17 Aug 2016 12:29:49 GMT</span>:
+                  Intel announces it will start making smartphone chips based on the designs of its rival ARM.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37106572">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Sage employee arrested in fraud probe</span> -
+                  <span class="postTime">Wed, 17 Aug 2016 20:38:57 GMT</span>:
+                  A 32-year-old Sage employee is arrested at Heathrow airport in connection with a fraud investigation.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37112870">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Cisco to cut up to 5,500 jobs</span> -
+                  <span class="postTime">Wed, 17 Aug 2016 21:58:01 GMT</span>:
+                  US tech giant Cisco Systems says it is cutting up to 7% of its global workforce, or 5,500 jobs, starting this summer.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37112872">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Why is Brooklyn Beckham selling Huawei's phones?</span> -
+                  <span class="postTime">Wed, 17 Aug 2016 13:46:05 GMT</span>:
+                  Brooklyn Beckham is the latest celebrity to advertise a tech product, but do they make a difference?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37106220">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Flipped 3D printer makes giant objects</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 11:49:26 GMT</span>:
+                  A 3D printer that can produce large items such as plane parts is developed.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37176662">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Buses battle it out on test track</span> -
+                  <span class="postTime">Tue, 23 Aug 2016 05:14:10 GMT</span>:
+                  BBC News visits an annual bus competition designed to test handling and fuel efficiency, which helps a UK bus group choose the next generation of vehicles.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37158521">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Meet the robots in Amazon's UK warehouses</span> -
+                  <span class="postTime">Thu, 18 Aug 2016 05:16:15 GMT</span>:
+                  These robots are being rolled out to Amazon's warehouses across the UK.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37114318">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Ford reveals driverless taxi plan</span> -
+                  <span class="postTime">Wed, 17 Aug 2016 09:41:01 GMT</span>:
+                  Ford plans to release self-driving cars that will be used as a taxi service in five years' time.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37106570">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Meet the man cycling the UK using virtual reality</span> -
+                  <span class="postTime">Tue, 16 Aug 2016 19:39:20 GMT</span>:
+                  Aaron Puzey is cycling the length of Great Britain from the comfort of his own living room, using the power of virtual reality.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-37099807">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Phones built for builders – are they tough enough?</span> -
+                  <span class="postTime">Mon, 15 Aug 2016 23:41:18 GMT</span>:
+                  BBC's Zoe Kleinman puts the new Tuffphone to the test and compares it to rival handsets.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37089880">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Airlander 10: Longest aircraft damaged during flight</span> -
+                  <span class="postTime">Wed, 24 Aug 2016 16:23:06 GMT</span>:
+                  The world's longest aircraft - the Airlander 10 - is damaged when it takes a nosedive on landing during its second test flight.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/uk-england-beds-bucks-herts-37174417">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Barbra Streisand teaches Siri a lesson</span> -
+                  <span class="postTime">Mon, 22 Aug 2016 11:13:05 GMT</span>:
+                  After discovering Apple's Siri pronounced her surname incorrectly, singer Barbra Streisand sets the record straight.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/entertainment-arts-37153494">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Children make 3D-printed boot for penguin and other news</span> -
+                  <span class="postTime">Thu, 21 Jul 2016 23:28:56 GMT</span>:
+                  BBC Click's Lara Lewington looks at some of the best of the week's technology news
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-36855109">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Low-cost underwater drone explores SS Tahoe shipwreck</span> -
+                  <span class="postTime">Tue, 19 Jul 2016 22:52:43 GMT</span>:
+                  An underwater drone has been developed which aims to make exploration more affordable and accessible.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-36834001">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Why fencing with a drone could make it smarter</span> -
+                  <span class="postTime">Mon, 18 Jul 2016 10:31:09 GMT</span>:
+                  The drones being taught to avoid moving obstacles in real-time
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-36774315">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">The hamster-powered drawing machine and other tech news</span> -
+                  <span class="postTime">Thu, 07 Jul 2016 23:30:58 GMT</span>:
+                  BBC Click's Lara Lewington looks at some of the best of the week's technology news
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-36734086">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Who's bugging you?</span> -
+                  <span class="postTime">Mon, 22 Aug 2016 23:24:04 GMT</span>:
+                  After the New Zealand rugby team discover a listening device in their Sydney hotel meeting room, we examine just how much spying technology has advanced in recent years.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37154314">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Can't wait, won't wait!</span> -
+                  <span class="postTime">Thu, 18 Aug 2016 23:32:16 GMT</span>:
+                  Online shoppers want fast websites and apps that are also visually rich and personalised, but how technically difficult is this to achieve?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37100091">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Found on Facebook</span> -
+                  <span class="postTime">Tue, 16 Aug 2016 23:49:43 GMT</span>:
+                  How a simple post on social media ended a Russian woman's 40-year search for her father.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/magazine-36287752">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Super Soaker</span> -
+                  <span class="postTime">Mon, 15 Aug 2016 22:05:15 GMT</span>:
+                  Lonnie Johnson had an illustrious career as a nuclear engineer working on the Galileo space programme and the stealth bomber - but he is best known for creating a water pistol
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/magazine-37062579">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Take me to paradise</span> -
+                  <span class="postTime">Tue, 16 Aug 2016 01:00:39 GMT</span>:
+                  Airlines and travel companies are trying to extend their reach into interactive entertainment.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-37048822">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Paranoid parents?</span> -
+                  <span class="postTime">Thu, 11 Aug 2016 23:40:35 GMT</span>:
+                  Can tech help busy working parents keep tabs on their toddlers or does it simply make them feel more guilty and paranoid?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-36854290">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Cold Turkey</span> -
+                  <span class="postTime">Tue, 09 Aug 2016 23:20:17 GMT</span>:
+                  A recent report by UK regulator Ofcom claimed that 59% of Brits consider themselves to be "hooked" on their handsets - but not everybody is a slave to their smartphone, reports Zoe Kleinman.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37012071">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Split personality</span> -
+                  <span class="postTime">Mon, 08 Aug 2016 23:01:02 GMT</span>:
+                  Who has your data? So much of our private details are stored in the cloud, but where is that exactly, and is it secure?
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/business-36854292">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Screen test</span> -
+                  <span class="postTime">Sun, 07 Aug 2016 07:53:00 GMT</span>:
+                  TV show Mr Robot has won a strong following among hackers for its accurate portrayal of how hacks can happen
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-37001302">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">How HoloLens is helping Nasa design the next Mars rover</span> -
+                  <span class="postTime">Wed, 13 Jul 2016 07:28:49 GMT</span>:
+                  Nasa has teamed up with Microsoft to help scientists collaborate on Mars research
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-36774308">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Technology explained: What is augmented reality?</span> -
+                  <span class="postTime">Thu, 14 Jul 2016 23:02:38 GMT</span>:
+                  Millions of people are playing Pokemon Go - a mobile game that blends the real world with computer graphics.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-36799788">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Inside a factory making robot waiters and waitresses</span> -
+                  <span class="postTime">Mon, 11 Jul 2016 10:59:54 GMT</span>:
+                  Meet the people making robot waiters and waitresses for restaurants in China
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-36715192">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            
+            <div class="postWrapper">
+                <p class="postBody">
+                  <span class="postAuthor">Pokemon Go players take to the streets</span> -
+                  <span class="postTime">Mon, 11 Jul 2016 18:08:31 GMT</span>:
+                  A new mobile game that lets players catch Pokemon as they roam the streets has become a phenomenon.
+                </p>
+                <div>
+                  <a href="http://www.bbc.co.uk/news/technology-36763910">Link to Original</a>
+                </div>
+                <hr style="border-top: dotted 1px;"/>
+            </div>
+            </div>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+</script>
+</body>
+
+</html>

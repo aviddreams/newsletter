@@ -6,6 +6,7 @@ from emailalert import email_user_alert
 from redditnews import *
 import pdb
 from html_template import *
+from rssfeed import *
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token_key, access_token_secret)
@@ -42,6 +43,16 @@ with open(send_file, 'w+') as f_html:
             """.format(subreddit_name)
         f_html.write(reddit_section_div)
         get_reddit_news(subreddit_name,f_html)
+        f_html.write('</div>')
+
+    bbc_links = [('http://feeds.bbci.co.uk/news/rss.xml','BBC News'),('http://feeds.bbci.co.uk/news/world/rss.xml','BBC WorldNews'),('http://feeds.bbci.co.uk/news/business/rss.xml','BBC Business'),('http://feeds.bbci.co.uk/news/technology/rss.xml','BBC Technology')]
+    for feed in bbc_links:
+        news_section_div = """
+            <button class="accordion">{}</button>
+            <div class="panel">
+            """.format(feed[1])
+        f_html.write(news_section_div)
+        parse_feeds(feed[0],f_html)
         f_html.write('</div>')
 
     f_html.write(ending_html)
